@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Big Breathing Adventure - ABC Active Breathing Course</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:wght@400;700;900&family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-content">
+      <div class="header-left">
+        <div class="logos">
+          <img src="./assets/images/VoH logo.png" alt="Voices of Hope" class="logo voices-logo">
+          <img src="./assets/images/KoL logo.png" alt="Kingston University London" class="logo kingston-logo">
+          <img src="./assets/images/cambridge_university2.svg" alt="Cambridge University" class="logo cambridge-logo">
+        </div>
+        <img src="./assets/images/ABC Logo 1.png" alt="ABC Active Breathing Course" class="abc-logo">
+      </div>
+
+      <nav class="navbar">
+        <ul class="nav-list">
+          <li><a href="#home" class="nav-link active" onclick="scrollToSection('home'); return false;">HOME</a></li>
+          <li><a href="#find-out-more" class="nav-link" onclick="scrollToSection('find-out-more'); return false;">FIND OUT MORE</a></li>
+          <li><a href="#" class="nav-link" onclick="openModal('enroll'); return false;">ENROLL</a></li>
+          <li><a href="#" class="nav-link" onclick="openModal('contact'); return false;">CONTACT US</a></li>
+        </ul>
+      </nav>
+
+      <div style="display: flex; align-items: center; gap: 0.75rem;">
+        <button class="btn-donate" onclick="openModal('donate')">DONATE</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <div class="hero-spacer"></div>
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <div class="hero-left">
+        <img src="./assets/images/BBA LOGO - hero.png" alt="BBA - Big Breathing Adventure" class="hero-bba-logo">
+        <h1 class="hero-title">
+          <span class="letter-b1">B</span><span class="letter-e1">E</span><span class="letter-c">C</span>
+          <span class="letter-o1">O</span><span class="letter-m">M</span><span class="letter-e2">E</span>
+          <span class="letter-a1"> A</span><br>
+          <span class="letter-b2">B</span><span class="letter-r">R</span><span class="letter-e3">E</span>
+          <span class="letter-a2">A</span><span class="letter-t">T</span><span class="letter-h">H</span><br>
+          <span class="letter-h2">H</span><span class="letter-e4">E</span><span class="letter-r2">R</span>
+          <span class="letter-o2">O</span>
+        </h1>
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+          <a href="week-1.html" class="btn-exercises" style="background: #10b981; text-decoration: none;">START COURSE</a>
+          <a href="#exercises" class="btn-exercises" style="text-decoration: none;" onclick="scrollToSection('exercises'); return false;">EXERCISES</a>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="hero-bear-container">
+          <img src="./assets/images/Hero-bear-bg.png" alt="Hero Bear Background" class="hero-bear-bg">
+          <img src="./assets/images/Hero-bear.png" alt="Breathing Bear Hero" class="hero-bear">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Introduction Section -->
+  <section id="find-out-more" class="introduction">
+    <div class="section-content">
+      <h2 class="section-title white centered">
+        <img src="./assets/images/w1/Introduction to The Big Breathing Adventure.png" alt="Introduction to The Big Breathing Adventure" class="section-title-image">
+      </h2>
+      <p class="intro-description">
+        <strong>Hey, Breathing Explorer!</strong><br><br>
+        Are you ready for an adventure? This course is your special guide to discovering the power of your breath.
+        You'll learn how to use it to feel calm, strong, and happy anytime, anywhere! Each session is packed with
+        fun challenges, cool activities, and little missions that help you grow your breathing superpowers. By the end,
+        you'll be a true Breathing Pro, ready to take on school, play, and every new adventure with confidence.
+      </p>
+      <div class="introduction-content">
+        <div class="video-player-main">
+          <video
+            controls
+            poster="./assets/images/Mask group.png"
+            class="intro-video"
+            style="width: 100%; max-width: 800px; height: auto;"
+          >
+            <source src="./assets/videos/Intro Video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section class="benefits">
+    <div class="section-content">
+      <h2 class="section-title centered">
+        <img src="./assets/images/w1/What families can expect_.png" alt="What families can expect?" class="section-title-image">
+      </h2>
+      <div class="benefits-grid">
+        <div class="benefit-item">
+          <img src="./assets/images/calmness.png" alt="Calmness" class="benefit-icon">
+          <p>Children learn to relax their bodies and minds.</p>
+        </div>
+        <div class="benefit-item">
+          <img src="./assets/images/Focus.png" alt="Focus" class="benefit-icon">
+          <p>Breathing techniques that support learning and attention.</p>
+        </div>
+        <div class="benefit-item">
+          <img src="./assets/images/Confidence.png" alt="Confidence" class="benefit-icon">
+          <p>A sense of control and self-awareness in everyday life.</p>
+        </div>
+        <div class="benefit-item">
+          <img src="./assets/images/Family connection.png" alt="Family Connection" class="benefit-icon">
+          <p>Parents can practice alongside children for shared moments of calm.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sessions Section -->
+  <section id="exercises" class="sessions">
+    <div class="section-content">
+      <h2 class="section-title centered">
+        <img src="./assets/images/w1/Sessions.png" alt="Sessions" class="section-title-image">
+      </h2>
+      <div class="sessions-grid">
+        <!-- Week 1 -->
+        <div class="session-card session-1">
+          <div class="session-header">
+            <img src="./assets/images/w1.png" alt="Week 1" class="week-number-img">
+          </div>
+          <p class="session-description">Discover the <strong>power of your breath</strong>! Learn <strong>basic breathing techniques</strong> that help you feel <strong>calm and focused</strong>.</p>
+          <a href="week-1.html" class="btn-view-exercises btn-blue">VIEW EXERCISES</a>
+        </div>
+
+        <!-- Week 2 -->
+        <div class="session-card session-2">
+          <div class="session-header">
+            <img src="./assets/images/w2.png" alt="Week 2" class="week-number-img">
+          </div>
+          <p class="session-description">Build on your <strong>breathing skills</strong> with <strong>deeper techniques</strong>. Learn how to <strong>control your breath</strong> to boost <strong>energy</strong>.</p>
+          <a href="week-2.html" class="btn-view-exercises btn-teal">VIEW EXERCISES</a>
+        </div>
+
+        <!-- Week 3 -->
+        <div class="session-card session-3">
+          <div class="session-header">
+            <img src="./assets/images/w3.png" alt="Week 3" class="week-number-img">
+          </div>
+          <p class="session-description">Master <strong>advanced breathing patterns</strong> that help you stay <strong>balanced and confident</strong>.</p>
+          <a href="week-3.html" class="btn-view-exercises btn-pink">VIEW EXERCISES</a>
+        </div>
+
+        <!-- Week 4 -->
+        <div class="session-card session-4">
+          <div class="session-header">
+            <img src="./assets/images/w4.png" alt="Week 4" class="week-number-img">
+          </div>
+          <p class="session-description">Explore <strong>rhythmic breathing exercises</strong> that sync your <strong>body and mind</strong>.</p>
+          <a href="week-4.html" class="btn-view-exercises btn-yellow">VIEW EXERCISES</a>
+        </div>
+
+        <!-- Week 5 -->
+        <div class="session-card session-5">
+          <div class="session-header">
+            <img src="./assets/images/w5.png" alt="Week 5" class="week-number-img">
+          </div>
+          <p class="session-description">Develop <strong>powerful breathing techniques</strong> for <strong>focus and clarity</strong>.</p>
+          <a href="week-5.html" class="btn-view-exercises btn-orange">VIEW EXERCISES</a>
+        </div>
+
+        <!-- Week 6 -->
+        <div class="session-card session-6">
+          <div class="session-header">
+            <img src="./assets/images/w6.png" alt="Week 6" class="week-number-img">
+          </div>
+          <p class="session-description">Become a <strong>breathing pro</strong>! Master all the <strong>techniques</strong> and create your own <strong>breathing routine</strong>.</p>
+          <a href="week-6.html" class="btn-view-exercises btn-beige">VIEW EXERCISES</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="enroll" class="footer">
+    <div class="footer-content">
+      <div class="footer-left">
+        <img src="./assets/images/Every Breath Counts.png" alt="Every Breath Counts" class="every-breath-counts">
+        <p class="footer-tagline">Your child's journey to better focus, calm, and wellbeing starts here.</p>
+      </div>
+      <div class="footer-right">
+        <div class="enrollment-info">
+          <ul class="enrollment-benefits">
+            <li>Receive your course invitation</li>
+            <li>Join our online breathing sessions each week</li>
+            <li>Practice simple exercises at home<br class="mobile-line-break"> in just 10 minutes a day</li>
+            <li>Watch your child's confidence and calmness grow</li>
+          </ul>
+          <button class="btn-enroll-now" onclick="openModal('enroll')">ENROLL NOW</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Site Visits -->
+    <div class="site-visits-section">
+      <div class="visitor-icon-circle"></div>
+      <span class="visitor-count">24</span>
+      <span class="visitor-text">Site Visits</span>
+    </div>
+  </footer>
+
+  <!-- Footer Second Block -->
+  <div class="footer-second-block">
+    <div class="footer-newsletter">
+      <h3>Sign up to our Newsletter</h3>
+      <p>Sign up to our newsletter to keep up to date with everything happening with Voice of Hope</p>
+      <form class="newsletter-form" onsubmit="handleNewsletterSubmit(event)">
+        <input type="text" placeholder="First Name" class="newsletter-input" id="newsletter-firstname" required>
+        <input type="text" placeholder="Last Name" class="newsletter-input" id="newsletter-lastname" required>
+        <input type="email" placeholder="Email" class="newsletter-input" id="newsletter-email" required>
+        <button type="submit" class="newsletter-submit">SUBMIT</button>
+      </form>
+      <div id="newsletter-message" style="margin-top: 1rem; display: none;"></div>
+      <div class="social-links">
+        <img src="./assets/images/Listitem  Link.png" alt="Facebook" class="social-icon">
+        <img src="./assets/images/Listitem  Link-1.png" alt="Twitter" class="social-icon">
+        <img src="./assets/images/Listitem  Link-2.png" alt="Instagram" class="social-icon">
+        <img src="./assets/images/Listitem  Link-3.png" alt="YouTube" class="social-icon">
+      </div>
+      <div class="footer-info">
+        <p class="footer-contact">info@voh.org.uk &nbsp;&nbsp;&nbsp; 161A Clarence Street, Kingston-Upon-Thames, Surrey KT1 1QT</p>
+        <p class="footer-charity">UK Charity Commission Registration 1187454</p>
+        <p class="footer-privacy">Privacy Policy</p>
+
+        <div class="footer-bottom-line">
+          <div class="footer-copyright-center">
+            <span class="footer-copyright">Copyright 2026 Voices of Hope</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div id="modal-overlay" class="modal-overlay" style="display: none;" onclick="closeModalOnOverlay(event)">
+    <div class="modal">
+      <div class="modal-header">
+        <h2 class="modal-title" id="modal-title">Contact Us</h2>
+        <button class="modal-close" onclick="closeModal()">&times;</button>
+      </div>
+      <div class="modal-body" id="modal-body">
+        <!-- Modal content will be injected by JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
