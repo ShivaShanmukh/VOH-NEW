@@ -1,0 +1,918 @@
+/* ============================================
+   WEEK 2 - ALIGNMENT FIXES (CYAN STRIPS)
+   ============================================ */
+
+.week-2-page {
+    position: relative;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.week-2-page main {
+    padding-top: 80px;
+}
+
+.week-2-page .week-hero-banner {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.week-2-page .week-hero-image {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+}
+
+.week-2-page .exercise-section-main {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto 80px;
+    padding: 60px 20px;
+}
+
+.week-2-page .video-section-container {
+    position: relative;
+    max-width: 900px;
+    margin: 40px auto;
+}
+
+.week-2-page .video-thumbnail-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 15px;
+    overflow: visible;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.week-2-page .video-thumbnail-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    background: #000;
+    display: block;
+}
+
+.week-2-page .blue-rectangle-below-thumbnail {
+    position: absolute;
+    left: -80px;
+    bottom: -60px;
+    width: 180px;
+    height: 450px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.week-2-page .blue-rectangle {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 127px;
+    height: 404px;
+    background-color: #5BC5C6;
+    z-index: 1;
+}
+
+.week-2-page .bear-on-blue-block {
+    position: absolute;
+    left: 10px;
+    bottom: 0;
+    width: 150px;
+    height: auto;
+    z-index: 3;
+}
+
+.week-2-page .bear-sign-asset {
+    width: 140px !important;
+    height: auto !important;
+    object-fit: contain;
+    display: block;
+}
+
+.week-2-page .blue-rectangle-top-right {
+    position: absolute;
+    right: -80px;
+    bottom: -60px;
+    width: 150px;
+    height: 300px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.week-2-page .exercise-section-main:nth-of-type(2) .blue-rectangle {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 97px;
+    height: 251px;
+    background-color: #5BC5C6;
+    z-index: 1;
+}
+
+@media (max-width: 1024px) {
+    .week-2-page .exercise-section-main {
+        padding: 40px 16px;
+        margin-bottom: 60px;
+    }
+
+    .week-2-page .blue-rectangle-below-thumbnail {
+        left: -60px;
+        width: 160px;
+    }
+
+    .week-2-page .blue-rectangle-top-right {
+        right: -60px;
+        width: 130px;
+    }
+}
+
+@media (max-width: 768px) {
+    .week-2-page main {
+        padding-top: 120px;
+    }
+
+    .week-2-page .week-hero-image {
+        max-width: 250px;
+    }
+
+    .week-2-page .exercise-section-main {
+        padding: 30px 16px;
+        margin-bottom: 40px;
+    }
+
+    .week-2-page .video-section-container {
+        max-width: 100%;
+        padding: 0 16px;
+    }
+
+    .week-2-page .blue-rectangle-below-thumbnail {
+        position: relative;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 150px;
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .week-2-page .blue-rectangle {
+        position: relative;
+        width: 100%;
+        max-width: 400px;
+        height: 100px;
+        left: 0;
+    }
+
+    .week-2-page .bear-on-blue-block {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 10px;
+        width: 120px;
+    }
+
+    .week-2-page .bear-sign-asset {
+        width: 100px !important;
+    }
+
+    .week-2-page .blue-rectangle-top-right {
+        position: relative;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 120px;
+        margin-top: 20px;
+    }
+
+    .week-2-page .exercise-section-main:nth-of-type(2) .blue-rectangle {
+        position: relative;
+        width: 100%;
+        max-width: 400px;
+        height: 100px;
+        right: 0;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .week-2-page .week-hero-image {
+        max-width: 200px;
+    }
+
+    .week-2-page .bear-sign-asset {
+        width: 80px !important;
+    }
+}
+
+/* ============================================
+   WEEK 3 - ALIGNMENT FIXES (PINK STRIPS)
+   ============================================ */
+
+.week-3-page {
+    position: relative;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.week-3-page main {
+    padding-top: 80px;
+}
+
+.week-3-page .week-hero-banner {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.week-3-page .week-hero-image {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+}
+
+.week-3-page .exercise-section-main {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto 80px;
+    padding: 60px 20px;
+}
+
+.week-3-page .video-section-container {
+    position: relative;
+    max-width: 900px;
+    margin: 40px auto;
+}
+
+.week-3-page .video-thumbnail-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 15px;
+    overflow: visible;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.week-3-page .video-thumbnail-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    background: #000;
+    display: block;
+}
+
+.week-3-page .blue-rectangle-below-thumbnail {
+    position: absolute;
+    left: -80px;
+    bottom: -60px;
+    width: 180px;
+    height: 450px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.week-3-page .blue-rectangle {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 127px;
+    height: 404px;
+    background-color: #E94A8A;
+    z-index: 1;
+}
+
+.week-3-page .bear-on-blue-block {
+    position: absolute;
+    left: 10px;
+    bottom: 0;
+    width: 150px;
+    height: auto;
+    z-index: 3;
+}
+
+.week-3-page .bear-sign-asset {
+    width: 140px !important;
+    height: auto !important;
+    object-fit: contain;
+    display: block;
+}
+
+.week-3-page .blue-rectangle-top-right {
+    position: absolute;
+    right: -80px;
+    bottom: -60px;
+    width: 150px;
+    height: 300px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.week-3-page .exercise-section-main:nth-of-type(2) .blue-rectangle {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 97px;
+    height: 251px;
+    background-color: #E94A8A;
+    z-index: 1;
+}
+
+@media (max-width: 1024px) {
+    .week-3-page .exercise-section-main {
+        padding: 40px 16px;
+        margin-bottom: 60px;
+    }
+
+    .week-3-page .blue-rectangle-below-thumbnail {
+        left: -60px;
+        width: 160px;
+    }
+
+    .week-3-page .blue-rectangle-top-right {
+        right: -60px;
+        width: 130px;
+    }
+}
+
+@media (max-width: 768px) {
+    .week-3-page main {
+        padding-top: 120px;
+    }
+
+    .week-3-page .week-hero-image {
+        max-width: 250px;
+    }
+
+    .week-3-page .exercise-section-main {
+        padding: 30px 16px;
+        margin-bottom: 40px;
+    }
+
+    .week-3-page .video-section-container {
+        max-width: 100%;
+        padding: 0 16px;
+    }
+
+    .week-3-page .blue-rectangle-below-thumbnail {
+        position: relative;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 150px;
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .week-3-page .blue-rectangle {
+        position: relative;
+        width: 100%;
+        max-width: 400px;
+        height: 100px;
+        left: 0;
+    }
+
+    .week-3-page .bear-on-blue-block {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 10px;
+        width: 120px;
+    }
+
+    .week-3-page .bear-sign-asset {
+        width: 100px !important;
+    }
+
+    .week-3-page .blue-rectangle-top-right {
+        position: relative;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 120px;
+        margin-top: 20px;
+    }
+
+    .week-3-page .exercise-section-main:nth-of-type(2) .blue-rectangle {
+        position: relative;
+        width: 100%;
+        max-width: 400px;
+        height: 100px;
+        right: 0;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .week-3-page .week-hero-image {
+        max-width: 200px;
+    }
+
+    .week-3-page .bear-sign-asset {
+        width: 80px !important;
+    }
+}
+
+/* ============================================
+   WEEK 4 - ALIGNMENT FIXES (YELLOW STRIPS)
+   ============================================ */
+
+.week-4-page {
+    position: relative;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.week-4-page main {
+    padding-top: 80px;
+}
+
+.week-4-page .week-hero-banner {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.week-4-page .week-hero-image {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+}
+
+.week-4-page .exercise-section-main {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto 80px;
+    padding: 60px 20px;
+}
+
+.week-4-page .video-section-container {
+    position: relative;
+    max-width: 900px;
+    margin: 40px auto;
+}
+
+.week-4-page .video-thumbnail-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 15px;
+    overflow: visible;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.week-4-page .video-thumbnail-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    background: #000;
+    display: block;
+}
+
+.week-4-page .blue-rectangle-below-thumbnail {
+    position: absolute;
+    left: -80px;
+    bottom: -60px;
+    width: 180px;
+    height: 450px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.week-4-page .blue-rectangle {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 127px;
+    height: 404px;
+    background-color: #FBBF24;
+    z-index: 1;
+}
+
+.week-4-page .bear-on-blue-block {
+    position: absolute;
+    left: 10px;
+    bottom: 0;
+    width: 150px;
+    height: auto;
+    z-index: 3;
+}
+
+.week-4-page .bear-sign-asset {
+    width: 140px !important;
+    height: auto !important;
+    object-fit: contain;
+    display: block;
+}
+
+.week-4-page .blue-rectangle-top-right {
+    position: absolute;
+    right: -80px;
+    bottom: -60px;
+    width: 150px;
+    height: 300px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.week-4-page .exercise-section-main:nth-of-type(2) .blue-rectangle {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 97px;
+    height: 251px;
+    background-color: #FBBF24;
+    z-index: 1;
+}
+
+@media (max-width: 1024px) {
+    .week-4-page .exercise-section-main {
+        padding: 40px 16px;
+        margin-bottom: 60px;
+    }
+
+    .week-4-page .blue-rectangle-below-thumbnail {
+        left: -60px;
+        width: 160px;
+    }
+
+    .week-4-page .blue-rectangle-top-right {
+        right: -60px;
+        width: 130px;
+    }
+}
+
+@media (max-width: 768px) {
+    .week-4-page main {
+        padding-top: 120px;
+    }
+
+    .week-4-page .week-hero-image {
+        max-width: 250px;
+    }
+
+    .week-4-page .exercise-section-main {
+        padding: 30px 16px;
+        margin-bottom: 40px;
+    }
+
+    .week-4-page .video-section-container {
+        max-width: 100%;
+        padding: 0 16px;
+    }
+
+    .week-4-page .blue-rectangle-below-thumbnail {
+        position: relative;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 150px;
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .week-4-page .blue-rectangle {
+        position: relative;
+        width: 100%;
+        max-width: 400px;
+        height: 100px;
+        left: 0;
+    }
+
+    .week-4-page .bear-on-blue-block {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 10px;
+        width: 120px;
+    }
+
+    .week-4-page .bear-sign-asset {
+        width: 100px !important;
+    }
+
+    .week-4-page .blue-rectangle-top-right {
+        position: relative;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 120px;
+        margin-top: 20px;
+    }
+
+    .week-4-page .exercise-section-main:nth-of-type(2) .blue-rectangle {
+        position: relative;
+        width: 100%;
+        max-width: 400px;
+        height: 100px;
+        right: 0;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .week-4-page .week-hero-image {
+        max-width: 200px;
+    }
+
+    .week-4-page .bear-sign-asset {
+        width: 80px !important;
+    }
+}
+
+/* ============================================
+   WEEK 5 - ALIGNMENT FIXES (ORANGE STRIPS)
+   ============================================ */
+
+.week-5-page {
+    position: relative;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.week-5-page main {
+    padding-top: 80px;
+}
+
+.week-5-page .week-hero-banner {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.week-5-page .week-hero-image {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+}
+
+.week-5-page .exercise-section-main {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto 80px;
+    padding: 60px 20px;
+}
+
+.week-5-page .video-section-container {
+    position: relative;
+    max-width: 900px;
+    margin: 40px auto;
+}
+
+.week-5-page .video-thumbnail-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 15px;
+    overflow: visible;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.week-5-page .video-thumbnail-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    background: #000;
+    display: block;
+}
+
+.week-5-page .blue-rectangle-below-thumbnail {
+    position: absolute;
+    left: -80px;
+    bottom: -60px;
+    width: 180px;
+    height: 450px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.week-5-page .blue-rectangle {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 127px;
+    height: 404px;
+    background-color: #F97316;
+    z-index: 1;
+}
+
+.week-5-page .bear-on-blue-block {
+    position: absolute;
+    left: 10px;
+    bottom: 0;
+    width: 150px;
+    height: auto;
+    z-index: 3;
+}
+
+.week-5-page .bear-sign-asset {
+    width: 140px !important;
+    height: auto !important;
+    object-fit: contain;
+    display: block;
+}
+
+.week-5-page .blue-rectangle-top-right {
+    position: absolute;
+    right: -80px;
+    bottom: -60px;
+    width: 150px;
+    height: 300px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.week-5-page .exercise-section-main:nth-of-type(2) .blue-rectangle {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 97px;
+    height: 251px;
+    background-color: #F97316;
+    z-index: 1;
+}
+
+@media (max-width: 1024px) {
+    .week-5-page .exercise-section-main {
+        padding: 40px 16px;
+        margin-bottom: 60px;
+    }
+
+    .week-5-page .blue-rectangle-below-thumbnail {
+        left: -60px;
+        width: 160px;
+    }
+
+    .week-5-page .blue-rectangle-top-right {
+        right: -60px;
+        width: 130px;
+    }
+}
+
+@media (max-width: 768px) {
+    .week-5-page main {
+        padding-top: 120px;
+    }
+
+    .week-5-page .week-hero-image {
+        max-width: 250px;
+    }
+
+    .week-5-page .exercise-section-main {
+        padding: 30px 16px;
+        margin-bottom: 40px;
+    }
+
+    .week-5-page .video-section-container {
+        max-width: 100%;
+        padding: 0 16px;
+    }
+
+    .week-5-page .blue-rectangle-below-thumbnail {
+        position: relative;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 150px;
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .week-5-page .blue-rectangle {
+        position: relative;
+        width: 100%;
+        max-width: 400px;
+        height: 100px;
+        left: 0;
+    }
+
+    .week-5-page .bear-on-blue-block {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 10px;
+        width: 120px;
+    }
+
+    .week-5-page .bear-sign-asset {
+        width: 100px !important;
+    }
+
+    .week-5-page .blue-rectangle-top-right {
+        position: relative;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 120px;
+        margin-top: 20px;
+    }
+
+    .week-5-page .exercise-section-main:nth-of-type(2) .blue-rectangle {
+        position: relative;
+        width: 100%;
+        max-width: 400px;
+        height: 100px;
+        right: 0;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .week-5-page .week-hero-image {
+        max-width: 200px;
+    }
+
+    .week-5-page .bear-sign-asset {
+        width: 80px !important;
+    }
+}
+
+/* ============================================
+   WEEK 6 - ALIGNMENT FIXES (BEIGE RECTANGLE + FISH)
+   ============================================ */
+
+.week-6-page {
+    position: relative;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.week-6-page main {
+    padding-top: 80px;
+}
+
+.week-6-page .week-hero-banner {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.week-6-page .week-hero-image {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+}
+
+.week-6-page .exercise-section-main {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto 80px;
+    padding: 60px 20px;
+}
+
+.week-6-page .video-section-container {
+    position: relative;
+    max-width: 900px;
+    margin: 40px auto;
+}
+
+.week-6-page .video-thumbnail-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 15px;
+    overflow: visible;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    z-index: 5;
+}
+
+.week-6-page .video-thumbnail-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    background: #000;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .week-6-page main {
+        padding-top: 120px;
+    }
+
+    .week-6-page .week-hero-image {
+        max-width: 250px;
+    }
+
+    .week-6-page .exercise-section-main {
+        padding: 30px 16px;
+        margin-bottom: 40px;
+    }
+
+    .week-6-page .video-section-container {
+        max-width: 100%;
+        padding: 0 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .week-6-page .week-hero-image {
+        max-width: 200px;
+    }
+}

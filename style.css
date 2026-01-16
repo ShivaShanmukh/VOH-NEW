@@ -53,9 +53,17 @@ body {
 }
 
 @keyframes sectionHighlight {
-  0% { background-color: transparent; }
-  50% { background-color: rgba(45, 212, 191, 0.1); }
-  100% { background-color: transparent; }
+  0% {
+    background-color: transparent;
+  }
+
+  50% {
+    background-color: rgba(45, 212, 191, 0.1);
+  }
+
+  100% {
+    background-color: transparent;
+  }
 }
 
 /* Typography - MyType for headings, Lato for descriptions */
@@ -265,7 +273,7 @@ section.sessions .section-title {
 }
 
 /* Header Right Section */
-.header-content > div:last-child {
+.header-content>div:last-child {
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -301,11 +309,11 @@ section.sessions .section-title {
   .abc-logo {
     height: clamp(22px, 4vw, 40px);
   }
-  
+
   .logo {
     height: clamp(20px, 3vw, 35px);
   }
-  
+
   .cambridge-logo {
     height: clamp(26px, 3.8vw, 42px);
   }
@@ -330,11 +338,11 @@ section.sessions .section-title {
   .abc-logo {
     height: clamp(20px, 3.5vw, 35px);
   }
-  
+
   .logo {
     height: clamp(18px, 2.5vw, 30px);
   }
-  
+
   .cambridge-logo {
     height: clamp(24px, 3.2vw, 38px);
   }
@@ -347,7 +355,7 @@ section.sessions .section-title {
   .btn-donate {
     order: 3;
   }
-  
+
   .nav-link {
     font-size: clamp(11px, 1.2vw, 14px);
   }
@@ -375,15 +383,15 @@ section.sessions .section-title {
   .navbar {
     margin-right: 0.25rem;
   }
-  
+
   .logo {
     height: clamp(16px, 2vw, 25px);
   }
-  
+
   .abc-logo {
     height: clamp(18px, 3vw, 30px);
   }
-  
+
   .cambridge-logo {
     height: clamp(22px, 3vw, 32px);
   }
@@ -829,6 +837,330 @@ section {
 
 .btn-know-more:hover {
   opacity: 0.9;
+}
+
+/* ============================================
+   ALIGNMENT FIX - ADD THIS TO THE END OF styles.css
+   ============================================ */
+
+/* Override Figma Export - Force Proper Layout */
+body {
+  position: relative !important;
+}
+
+/* Weekly Page Container */
+.session-32-1,
+.session-33-1,
+.session-35-1,
+.session-36-1,
+.session-6-2-1 {
+  position: relative !important;
+  width: 100% !important;
+  min-height: 100vh !important;
+  display: flex !important;
+  flex-direction: column !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* COLORED STRIPS - LEFT SIDE */
+.rectangle-73-2,
+.rectangle-73-3 {
+  position: absolute !important;
+  left: 0 !important;
+  top: 200px !important;
+  width: 20% !important;
+  height: 600px !important;
+  z-index: 1 !important;
+}
+
+/* Week 1 - Blue */
+.session-32-1 .rectangle-73-3 {
+  background-color: #4169B8 !important;
+}
+
+/* Week 3 - Pink */
+.session-33-1 .rectangle-73-2 {
+  background-color: #E94A8A !important;
+}
+
+/* Week 4 - Yellow */
+.session-35-1 .rectangle-73-2 {
+  background-color: #C8D530 !important;
+}
+
+/* Week 5 - Orange */
+.session-36-1 .rectangle-73-2 {
+  background-color: #F5A623 !important;
+}
+
+/* Week 6 - Beige */
+.session-6-2-1 .rectangle-56-2 {
+  position: absolute !important;
+  right: 0 !important;
+  top: 200px !important;
+  width: 20% !important;
+  height: 600px !important;
+  background-color: #E8DCC4 !important;
+  z-index: 1 !important;
+}
+
+/* COLORED STRIPS - RIGHT SIDE (alternating layout) */
+.rectangle-76-3,
+.rectangle-76-4 {
+  position: absolute !important;
+  right: 0 !important;
+  top: 1000px !important;
+  width: 20% !important;
+  height: 600px !important;
+  z-index: 1 !important;
+}
+
+/* Week 1 - Blue (second exercise) */
+.session-32-1 .rectangle-76-4 {
+  background-color: #4169B8 !important;
+}
+
+/* Week 3 - Pink (second exercise) */
+.session-33-1 .rectangle-76-3 {
+  background-color: #E94A8A !important;
+}
+
+/* Week 4 - Yellow (second exercise) */
+.session-35-1 .rectangle-76-3 {
+  background-color: #C8D530 !important;
+}
+
+/* Week 5 - Orange (second exercise) */
+.session-36-1 .rectangle-76-3 {
+  background-color: #F5A623 !important;
+}
+
+/* CHARACTER IMAGES - POSITIONED AT BOTTOM OF STRIPS */
+.sing-1-101,
+.bear-stand-1-80,
+.bear-stand-1-79,
+.layer-48-1-18 {
+  position: absolute !important;
+  left: 0 !important;
+  bottom: 0 !important;
+  width: 300px !important;
+  height: auto !important;
+  z-index: 2 !important;
+  transform: translateY(-100px) !important;
+}
+
+/* Week 6 Goldfish - Right Side */
+.session-6-2-1 .layer-48-1-18 {
+  left: auto !important;
+  right: 0 !important;
+}
+
+/* WEEK BADGES - CENTER TOP */
+.w1-102,
+.w2-81,
+.w4-80,
+.w5-80,
+.w6-60 {
+  position: relative !important;
+  width: 150px !important;
+  height: auto !important;
+  margin: 40px auto 20px auto !important;
+  display: block !important;
+  z-index: 10 !important;
+}
+
+/* VIDEO CONTAINERS - STANDARDIZED SIZE */
+.mask-group-30,
+.mask-group-41,
+.mask-group-6,
+.mask-group-18,
+.mask-group-8 {
+  position: relative !important;
+  width: 80% !important;
+  max-width: 900px !important;
+  margin: 40px auto !important;
+  aspect-ratio: 16 / 9 !important;
+  border-radius: 15px !important;
+  overflow: hidden !important;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3) !important;
+  z-index: 5 !important;
+}
+
+/* Video Images */
+.mask-group-30 img,
+.mask-group-41 img,
+.mask-group-6 img,
+.mask-group-18 img,
+.mask-group-8 img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+}
+
+/* Video Overlaps Strip on LEFT */
+.session-32-1 .mask-group-30,
+.session-33-1 .group-98-5 .mask-group-6,
+.session-35-1 .group-102-5 .mask-group-6,
+.session-36-1 .group-104-5 .mask-group-6 {
+  margin-left: 10% !important;
+  margin-right: auto !important;
+}
+
+/* Video Overlaps Strip on RIGHT */
+.session-32-1 .group-96-40 .mask-group-41,
+.session-33-1 .group-99-17 .mask-group-18,
+.session-35-1 .group-103-16 .mask-group-17,
+.session-36-1 .group-105-16 .mask-group-17,
+.session-6-2-1 .mask-group-8 {
+  margin-left: auto !important;
+  margin-right: 10% !important;
+}
+
+/* EXERCISE TEXT SECTIONS */
+.frame-48428-51,
+.frame-48429-96,
+.frame-48430-75,
+.frame-48431-69,
+.frame-48434-28,
+.frame-48436-28 {
+  position: relative !important;
+  max-width: 800px !important;
+  margin: 60px auto 40px auto !important;
+  padding: 0 20px !important;
+  text-align: center !important;
+  z-index: 5 !important;
+}
+
+/* Colorful Titles */
+.group-107-52,
+.group-106-97,
+.group-106-76,
+.group-106-70,
+.group-107-29,
+.group-107-75 {
+  margin-bottom: 20px !important;
+}
+
+/* Exercise Descriptions */
+.text-55,
+.text-100,
+.text-79,
+.text-74,
+.text-32 {
+  font-size: 18px !important;
+  line-height: 1.6 !important;
+  color: #333 !important;
+  margin-top: 15px !important;
+}
+
+/* LOCK OVERLAYS */
+.rectangle-26-12,
+.rectangle-31-23,
+.rectangle-33-22,
+.rectangle-34-11,
+.rectangle-36-13 {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  background: rgba(0, 0, 0, 0.7) !important;
+  z-index: 10 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* Lock Icon Centers */
+.group-97-11,
+.rectangle-31-23+.group-24,
+.rectangle-33-22+.group-23,
+.rectangle-34-11+.group-12,
+.rectangle-36-13+.group-14 {
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  z-index: 15 !important;
+}
+
+/* Lock Message */
+.text-28,
+.text-27 {
+  position: absolute !important;
+  top: 20px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  text-align: center !important;
+  font-size: 24px !important;
+  font-weight: 700 !important;
+  z-index: 20 !important;
+  background: white !important;
+  padding: 10px 20px !important;
+  border-radius: 8px !important;
+}
+
+/* RESPONSIVE FIXES */
+@media (max-width: 1024px) {
+
+  .rectangle-73-2,
+  .rectangle-73-3,
+  .rectangle-76-3,
+  .rectangle-76-4,
+  .rectangle-56-2 {
+    width: 100% !important;
+    height: 150px !important;
+    left: 0 !important;
+    right: auto !important;
+    top: 150px !important;
+  }
+
+  .sing-1-101,
+  .bear-stand-1-80,
+  .bear-stand-1-79,
+  .layer-48-1-18 {
+    width: 200px !important;
+    left: 50% !important;
+    transform: translateX(-50%) translateY(-50px) !important;
+  }
+
+  .mask-group-30,
+  .mask-group-41,
+  .mask-group-6,
+  .mask-group-18,
+  .mask-group-8 {
+    width: 90% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .rectangle-73-2,
+  .rectangle-73-3,
+  .rectangle-76-3,
+  .rectangle-76-4,
+  .rectangle-56-2 {
+    height: 100px !important;
+  }
+
+  .sing-1-101,
+  .bear-stand-1-80,
+  .bear-stand-1-79,
+  .layer-48-1-18 {
+    width: 150px !important;
+  }
+
+  .mask-group-30,
+  .mask-group-41,
+  .mask-group-6,
+  .mask-group-18,
+  .mask-group-8 {
+    width: 95% !important;
+    border-radius: 10px !important;
+  }
 }
 
 /* Introduction Section */
@@ -2880,17 +3212,124 @@ section {
   /* Allow bear and rectangle to extend below */
 }
 
+/* ============================================
+   UNIFIED VIDEO PLAYER STYLES
+   ============================================ */
+.video-container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  aspect-ratio: 16 / 9;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  background: #000;
+}
+
+.video-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Play Button Overlay */
+.video-play-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.video-container:hover .video-play-overlay {
+  opacity: 1;
+}
+
+.video-play-overlay .play-icon {
+  width: 80px;
+  height: 80px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.video-play-overlay .play-icon::before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-left: 25px solid #333;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  margin-left: 5px;
+}
+
+.video-play-overlay:hover .play-icon {
+  transform: scale(1.1);
+  background: #fff;
+}
+
+/* Video Lock Overlay */
+.video-lock-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 10;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+}
+
+.video-lock-overlay .lock-icon-large {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 1rem;
+  background-image: url('./assets/images/lock icon.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.video-lock-overlay .lock-message {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Original video-thumbnail-img for backward compatibility */
 .video-thumbnail-img {
   width: 100%;
   max-width: 900px;
   height: auto;
-  object-fit: contain;
-  border-radius: 12px;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
   position: relative;
   z-index: 2;
-  /* Thumbnail in front of blue rectangle */
   display: block;
   margin: 0 auto;
+  background: #000;
 }
 
 .video-thumbnail-img.locked {
@@ -2901,16 +3340,11 @@ section {
 .blue-rectangle-below-thumbnail {
   position: absolute;
   bottom: calc(-8% - 60px);
-  /* Move down by 60px total (20px + 40px more) */
   left: -5%;
-  /* Move right (towards center) */
   z-index: 1;
-  /* Behind thumbnail, in front of bear */
   display: flex;
   align-items: flex-end;
-  /* Align to bottom of rectangle */
   justify-content: flex-start;
-  /* Align bear to left side of rectangle */
   overflow: visible !important;
   max-width: none !important;
 }
@@ -2919,7 +3353,6 @@ section {
   position: absolute;
   top: -12%;
   right: calc(-12% + 60px);
-  /* Move left by 60px */
   z-index: 1;
 }
 
@@ -2930,13 +3363,11 @@ section {
 
 .rectangle-asset {
   display: none;
-  /* Hide image asset */
 }
 
 .blue-rectangle {
   width: 97px;
   height: 251px;
-  /* background-color set by week specific class */
   position: relative;
   z-index: 1;
 }
@@ -2946,7 +3377,86 @@ section {
   .blue-rectangle {
     width: 46px;
     height: 120px;
-    /* Maintain aspect ratio */
+  }
+}
+
+/* Responsive Video Container */
+@media (max-width: 992px) {
+  .video-container {
+    max-width: 700px;
+    border-radius: 12px;
+  }
+
+  .video-play-overlay .play-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .video-lock-overlay .lock-icon-large {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .video-container {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.25);
+  }
+
+  .video-section-container {
+    padding: 0 1rem;
+  }
+
+  .video-thumbnail-img {
+    border-radius: 10px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.25);
+  }
+
+  .video-play-overlay .play-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .video-play-overlay .play-icon::before {
+    border-left-width: 18px;
+    border-top-width: 10px;
+    border-bottom-width: 10px;
+  }
+
+  .video-lock-overlay {
+    padding: 1rem;
+  }
+
+  .video-lock-overlay .lock-icon-large {
+    width: 50px;
+    height: 50px;
+  }
+
+  .video-lock-overlay .lock-message {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .video-container {
+    border-radius: 8px;
+  }
+
+  .video-thumbnail-img {
+    border-radius: 8px;
+  }
+
+  .video-play-overlay .play-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .video-play-overlay .play-icon::before {
+    border-left-width: 14px;
+    border-top-width: 8px;
+    border-bottom-width: 8px;
   }
 }
 
@@ -2993,13 +3503,10 @@ section {
 
 .bear-on-blue-block {
   position: absolute;
-  bottom: calc(-60% - 25px);
-  /* Move down by 60px total (was +15px, now -25px = -40px more) */
-  left: 60%;
-  /* Position at 60% of blue rectangle width from left */
+  bottom: 15px;
+  left: calc(100% - 30px);
   transform: translateX(-50%);
   z-index: 3;
-  /* In front of blue rectangle, behind thumbnail */
   pointer-events: none;
   overflow: visible !important;
   max-width: none !important;
@@ -3031,7 +3538,7 @@ section {
     visibility: visible !important;
     opacity: 1 !important;
   }
-  
+
   .week-6-page .fish-asset {
     width: clamp(80px, 12vw, 140px) !important;
     height: auto !important;
@@ -3039,27 +3546,27 @@ section {
     visibility: visible !important;
     opacity: 1 !important;
   }
-  
+
   .week-6-title-section {
     margin-bottom: 1rem;
     padding: 0 1rem;
     min-height: 120px;
   }
-  
+
   .week-6-page .exercise-content-wrapper {
     margin-top: 0.5rem;
   }
-  
+
   .week-6-page .exercise-intro-text {
     margin-top: 0;
   }
-  
+
   .exercise-main-title {
     word-break: break-word;
     overflow-wrap: break-word;
     max-width: 100%;
   }
-  
+
   .week-6-page .exercise-title-section {
     padding: 0 0.5rem;
     overflow: visible;
@@ -3273,14 +3780,14 @@ section {
     /* Reduced min and max size for better mobile fit */
     letter-spacing: -0.03em;
   }
-  
+
   .week-6-page .exercise-main-title {
     font-size: clamp(2rem, 6vw, 2.5rem);
     /* Readable size for week 6 */
     line-height: 0.9 !important;
     letter-spacing: -0.03em !important;
   }
-  
+
   .week-6-page .title-line-1,
   .week-6-page .title-line-2 {
     font-size: clamp(2rem, 6vw, 2.5rem);
@@ -3329,12 +3836,9 @@ section {
   }
 
   .bear-on-blue-block {
-    bottom: calc(-50% - 25px);
-    /* Move down by 60px total (was +15px, now -25px = -40px more) */
-    left: 60%;
-    /* Position at 60% of blue rectangle width from left */
+    bottom: 10px;
+    left: calc(100% - 20px);
     transform: translateX(-50%);
-    /* Move inside (towards center) */
   }
 }
 
@@ -3500,6 +4004,7 @@ section {
 }
 
 @media (max-width: 768px) {
+
   .week-1-page .bear-on-blue-block .bear-sign-asset,
   .week-2-page .bear-on-blue-block .bear-sign-asset,
   .week-3-page .bear-on-blue-block .bear-sign-asset,
@@ -3544,7 +4049,9 @@ section {
 
 .btn-signin:hover {
   background: #f3f4f6;
-}/* Basic styles for ABC Active Breathing Course */
+}
+
+/* Basic styles for ABC Active Breathing Course */
 
 /* Override for Next.js Image component */
 img {
@@ -3585,6 +4092,7 @@ img {
   background: #2dd4bf;
   color: white;
 }
+
 .btn-auth {
   font-family: 'Lato', sans-serif;
   font-weight: 700;
@@ -3785,26 +4293,26 @@ img {
   .header-content {
     padding: 0.5rem 1rem;
   }
-  
+
   .logo {
     max-width: 80px;
     width: auto;
     height: auto !important;
     object-fit: contain;
   }
-  
+
   .abc-logo {
     max-width: 90px;
     width: auto;
     height: auto !important;
     object-fit: contain;
   }
-  
+
   .nav-link {
     font-size: 0.75rem !important;
     padding: 0.4rem 0.6rem !important;
   }
-  
+
   .btn-donate,
   .btn-auth {
     font-size: 0.7rem !important;
@@ -3817,36 +4325,36 @@ img {
     flex-wrap: wrap;
     gap: 0.5rem;
   }
-  
+
   .logo {
     max-width: 65px;
     width: auto;
     height: auto !important;
     object-fit: contain;
   }
-  
+
   .abc-logo {
     max-width: 75px;
     width: auto;
     height: auto !important;
     object-fit: contain;
   }
-  
+
   .navbar {
     order: 3;
     width: 100%;
   }
-  
+
   .nav-list {
     justify-content: center;
     gap: 0.5rem;
   }
-  
+
   .nav-link {
     font-size: 0.7rem !important;
     padding: 0.3rem 0.5rem !important;
   }
-  
+
   .btn-donate,
   .btn-auth {
     font-size: 0.65rem !important;
@@ -3858,36 +4366,36 @@ img {
   .header-content {
     padding: 0.5rem;
   }
-  
+
   .logos {
     gap: 0.3rem !important;
   }
-  
+
   .logo {
     max-width: 50px;
     width: auto;
     height: auto !important;
     object-fit: contain;
   }
-  
+
   .abc-logo {
     max-width: 60px;
     width: auto;
     height: auto !important;
     object-fit: contain;
   }
-  
+
   .nav-link {
     font-size: 0.65rem !important;
     padding: 0.25rem 0.4rem !important;
   }
-  
+
   .btn-donate,
   .btn-auth {
     font-size: 0.6rem !important;
     padding: 0.3rem 0.6rem !important;
   }
-  
+
   #auth-container {
     gap: 0.3rem !important;
   }
@@ -3899,46 +4407,46 @@ img {
     align-items: center;
     padding: 0.5rem;
   }
-  
+
   .header-left {
     flex-direction: column;
     align-items: center;
     gap: 0.5rem;
   }
-  
+
   .logos {
     gap: 0.4rem !important;
   }
-  
+
   .logo {
     max-width: 40px;
     width: auto;
     height: auto !important;
     object-fit: contain;
   }
-  
+
   .abc-logo {
     max-width: 50px;
     width: auto;
     height: auto !important;
     object-fit: contain;
   }
-  
+
   .navbar {
     width: 100%;
   }
-  
+
   .nav-list {
     flex-wrap: wrap;
     justify-content: center;
     gap: 0.3rem;
   }
-  
+
   .nav-link {
     font-size: 0.6rem !important;
     padding: 0.25rem 0.35rem !important;
   }
-  
+
   .btn-donate,
   .btn-auth {
     font-size: 0.55rem !important;
@@ -3946,3 +4454,2422 @@ img {
   }
 }
 
+/* ============================================
+   VIDEO LOCKING SYSTEM STYLES
+   ============================================ */
+
+/* Lock message overlay */
+.lock-message {
+  color: white;
+  background: rgba(0, 0, 0, 0.85);
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+  font-family: 'Lato', sans-serif;
+  font-size: 1rem;
+  text-align: center;
+  max-width: 300px;
+  line-height: 1.4;
+}
+
+/* Completion badge */
+.completion-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  display: none;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  z-index: 15;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
+  animation: badgePulse 2s ease-in-out infinite;
+}
+
+.completion-badge.show {
+  display: flex;
+}
+
+@keyframes badgePulse {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.checkmark {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Week progress indicator */
+.week-progress-indicator {
+  text-align: center;
+  margin: 2rem auto;
+  padding: 1rem 2rem;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.1rem;
+  color: #374151;
+  background: #f3f4f6;
+  border-radius: 8px;
+  max-width: 400px;
+}
+
+.week-progress-indicator p {
+  margin: 0;
+  font-weight: 500;
+}
+
+.week-progress-indicator span {
+  font-weight: 700;
+  color: #2dd4bf;
+  font-size: 1.2rem;
+}
+
+/* Locked video cursor */
+.video-thumbnail-wrapper.locked-state {
+  cursor: not-allowed;
+}
+
+.video-thumbnail-wrapper.locked-state video {
+  pointer-events: none;
+}
+
+/* Enhanced lock overlay */
+.lock-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  display: none;
+  pointer-events: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-thumbnail-wrapper.locked-state .lock-overlay {
+  display: flex;
+}
+
+/* Responsive adjustments for locking system */
+@media (max-width: 768px) {
+  .completion-badge {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+    top: 0.5rem;
+    right: 0.5rem;
+  }
+
+  .lock-message {
+    font-size: 0.9rem;
+    padding: 0.8rem 1.5rem;
+    max-width: 250px;
+  }
+
+  .week-progress-indicator {
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+  }
+
+  .week-progress-indicator span {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .completion-badge {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.7rem;
+  }
+
+  .lock-message {
+    font-size: 0.8rem;
+    padding: 0.6rem 1rem;
+    max-width: 200px;
+  }
+
+  .week-progress-indicator {
+    font-size: 0.9rem;
+    padding: 0.6rem 1rem;
+  }
+}
+
+/* ========================================
+   VIDEO LOCKING SYSTEM STYLES
+   ======================================== */
+
+/* Locked video wrapper */
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Lock overlay container */
+.video-lock-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+  border-radius: 12px;
+  cursor: not-allowed;
+}
+
+.video-lock-overlay .lock-icon-large {
+  width: 80px;
+  height: 80px;
+  background-image: url('./assets/images/lock icon.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  margin-bottom: 1rem;
+}
+
+.video-lock-overlay .lock-message {
+  color: white;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.1rem;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+/* Locked video styling */
+.video-locked {
+  filter: grayscale(100%) brightness(0.5) blur(2px);
+  pointer-events: none;
+}
+
+/* Completed badge */
+.video-completed-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #10b981;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-family: 'Lato', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  z-index: 15;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.4);
+}
+
+.video-completed-badge::before {
+  content: '\u2713';
+  font-size: 1rem;
+}
+
+/* Progress indicator */
+.week-progress-indicator {
+  background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  margin: 1rem auto 2rem;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.week-progress-indicator h4 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.25rem;
+  color: #374151;
+  margin-bottom: 0.5rem;
+}
+
+.progress-bar-container {
+  width: 100%;
+  height: 12px;
+  background: #d1d5db;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #10b981 0%, #059669 100%);
+  border-radius: 6px;
+  transition: width 0.5s ease;
+}
+
+.progress-text {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+/* Week locked message banner */
+.week-locked-banner {
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  border: 2px solid #f59e0b;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1rem auto 2rem;
+  max-width: 600px;
+  text-align: center;
+}
+
+.week-locked-banner h3 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.5rem;
+  color: #92400e;
+  margin-bottom: 0.5rem;
+}
+
+.week-locked-banner p {
+  font-family: 'Lato', sans-serif;
+  font-size: 1rem;
+  color: #78350f;
+}
+
+/* Unlock animation */
+@keyframes unlockPulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.just-unlocked {
+  animation: unlockPulse 0.5s ease-out;
+}
+
+/* ============================================
+   WEEK 3 PAGE - SPECIFIC FIX
+   Add this to your styles.css or link as separate file
+   ============================================ */
+
+/* WEEK 3 CONTAINER - Force proper layout */
+.session-33-1 {
+  position: relative !important;
+  width: 100% !important;
+  min-height: 100vh !important;
+  background: white !important;
+  padding-top: 100px !important;
+}
+
+/* WEEK 3 BADGE - Center at top */
+.session-33-1 .w3-81 {
+  position: relative !important;
+  display: block !important;
+  width: 150px !important;
+  height: auto !important;
+  margin: 0 auto 40px auto !important;
+  z-index: 100 !important;
+}
+
+/* ============================================
+   FIRST EXERCISE SECTION (Breathing Like a Pro)
+   ============================================ */
+
+/* PINK STRIP - LEFT SIDE */
+.session-33-1 .rectangle-73-2 {
+  position: absolute !important;
+  left: 50px !important;
+  top: 250px !important;
+  width: 100px !important;
+  height: 500px !important;
+  background-color: #E94A8A !important;
+  z-index: 1 !important;
+}
+
+/* EXERCISE 1 CONTAINER */
+.session-33-1 .frame-48430-75 {
+  position: relative !important;
+  max-width: 900px !important;
+  margin: 60px auto 40px auto !important;
+  padding: 0 20px !important;
+  text-align: center !important;
+  z-index: 10 !important;
+}
+
+/* EXERCISE 1 TITLE - Breathing Like a Pro */
+.session-33-1 .frame-48430-75 .group-106-76 {
+  margin-bottom: 20px !important;
+}
+
+.session-33-1 .frame-48430-75 .text-77,
+.session-33-1 .frame-48430-75 .text-78 {
+  font-size: 48px !important;
+  font-weight: 900 !important;
+  line-height: 1.1 !important;
+  margin: 5px 0 !important;
+}
+
+/* EXERCISE 1 DESCRIPTION */
+.session-33-1 .frame-48430-75 .text-79 {
+  font-size: 18px !important;
+  line-height: 1.6 !important;
+  color: #333 !important;
+  max-width: 700px !important;
+  margin: 20px auto !important;
+}
+
+/* EXERCISE 1 VIDEO CONTAINER */
+.session-33-1 .group-98-5 {
+  position: relative !important;
+  max-width: 650px !important;
+  margin: 0 auto !important;
+  aspect-ratio: 16 / 9 !important;
+  z-index: 5 !important;
+}
+
+/* EXERCISE 1 VIDEO WRAPPER */
+.session-33-1 .group-98-5 .mask-group-6 {
+  position: relative !important;
+  width: 100% !important;
+  border-radius: 15px !important;
+  overflow: hidden !important;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3) !important;
+  background: #000 !important;
+}
+
+/* Video thumbnail inside */
+.session-33-1 .group-98-5 .mask-group-6 .mask-group-8 {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.session-33-1 .group-98-5 .mask-group-6 .image-3-10 {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+}
+
+/* LOCK OVERLAY for Exercise 1 */
+.session-33-1 .group-98-5 .group-97-11 {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  background: rgba(0, 0, 0, 0.75) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  z-index: 20 !important;
+}
+
+.session-33-1 .group-98-5 .rectangle-26-12 {
+  position: absolute !important;
+  width: 100% !important;
+  height: 100% !important;
+  background: rgba(0, 0, 0, 0.75) !important;
+}
+
+.session-33-1 .group-98-5 .group-13 {
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  z-index: 25 !important;
+}
+
+/* SHEEP CHARACTER - Bottom left of pink strip */
+.session-33-1 .bear-stand-1-80 {
+  position: absolute !important;
+  left: 60px !important;
+  bottom: 20px !important;
+  top: auto !important;
+  width: 110px !important;
+  height: auto !important;
+  z-index: 3 !important;
+}
+
+/* ============================================
+   SECOND EXERCISE SECTION (Strength Building)
+   ============================================ */
+
+/* PINK STRIP - RIGHT SIDE */
+.session-33-1 .rectangle-76-3 {
+  position: absolute !important;
+  right: 50px !important;
+  top: 1200px !important;
+  width: 90px !important;
+  height: 400px !important;
+  background-color: #E94A8A !important;
+  z-index: 1 !important;
+}
+
+/* EXERCISE 2 CONTAINER */
+.session-33-1 .frame-48431-69 {
+  position: relative !important;
+  max-width: 900px !important;
+  margin: 80px auto 40px auto !important;
+  padding: 0 20px !important;
+  text-align: center !important;
+  z-index: 10 !important;
+}
+
+/* EXERCISE 2 TITLE - Strength Building */
+.session-33-1 .frame-48431-69 .group-106-70 {
+  margin-bottom: 20px !important;
+}
+
+.session-33-1 .frame-48431-69 .text-71,
+.session-33-1 .frame-48431-69 .text-72,
+.session-33-1 .frame-48431-69 .text-73 {
+  font-size: 48px !important;
+  font-weight: 900 !important;
+  line-height: 1.1 !important;
+  margin: 5px 0 !important;
+}
+
+/* EXERCISE 2 DESCRIPTION */
+.session-33-1 .frame-48431-69 .text-74 {
+  font-size: 18px !important;
+  line-height: 1.6 !important;
+  color: #333 !important;
+  max-width: 700px !important;
+  margin: 20px auto !important;
+}
+
+/* EXERCISE 2 VIDEO CONTAINER */
+.session-33-1 .group-99-17 {
+  position: relative !important;
+  max-width: 650px !important;
+  margin: 0 auto !important;
+  aspect-ratio: 16 / 9 !important;
+  z-index: 5 !important;
+}
+
+/* EXERCISE 2 VIDEO WRAPPER */
+.session-33-1 .group-99-17 .mask-group-18 {
+  position: relative !important;
+  width: 100% !important;
+  border-radius: 15px !important;
+  overflow: hidden !important;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3) !important;
+  background: #000 !important;
+}
+
+/* Video thumbnail inside */
+.session-33-1 .group-99-17 .mask-group-18 .mask-group-20 {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.session-33-1 .group-99-17 .mask-group-18 .image-3-22 {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+}
+
+/* LOCK OVERLAY for Exercise 2 */
+.session-33-1 .group-99-17 .rectangle-31-23 {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  background: rgba(0, 0, 0, 0.75) !important;
+  z-index: 20 !important;
+}
+
+.session-33-1 .group-99-17 .group-24 {
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  z-index: 25 !important;
+}
+
+/* LOCK MESSAGE - Top of page */
+.session-33-1 .text-28 {
+  position: fixed !important;
+  top: 120px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  background: white !important;
+  padding: 15px 30px !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important;
+  font-size: 20px !important;
+  font-weight: 700 !important;
+  color: #333 !important;
+  z-index: 1000 !important;
+  text-align: center !important;
+}
+
+/* ============================================
+   RESPONSIVE - WEEK 3
+   ============================================ */
+
+@media (max-width: 1200px) {
+
+  .session-33-1 .rectangle-73-2 {
+    left: 30px !important;
+    width: 80px !important;
+  }
+
+  .session-33-1 .rectangle-76-3 {
+    right: 30px !important;
+    width: 70px !important;
+  }
+
+  .session-33-1 .bear-stand-1-80 {
+    left: 40px !important;
+    width: 90px !important;
+  }
+
+  .session-33-1 .group-98-5,
+  .session-33-1 .group-99-17 {
+    max-width: 550px !important;
+  }
+}
+
+@media (max-width: 768px) {
+
+  /* Stack strips horizontally below videos */
+  .session-33-1 .rectangle-73-2 {
+    position: relative !important;
+    left: 0 !important;
+    top: auto !important;
+    width: 100% !important;
+    height: 80px !important;
+    margin: 20px 0 !important;
+  }
+
+  .session-33-1 .rectangle-76-3 {
+    position: relative !important;
+    right: auto !important;
+    left: 0 !important;
+    top: auto !important;
+    width: 100% !important;
+    height: 80px !important;
+    margin: 20px 0 !important;
+  }
+
+  /* Center character on mobile */
+  .session-33-1 .bear-stand-1-80 {
+    position: relative !important;
+    left: 50% !important;
+    bottom: auto !important;
+    transform: translateX(-50%) !important;
+    width: 100px !important;
+    margin-top: 10px !important;
+  }
+
+  /* Full-width video containers on mobile */
+  .session-33-1 .group-98-5,
+  .session-33-1 .group-99-17 {
+    max-width: 100% !important;
+    padding: 0 15px !important;
+  }
+
+  /* Center videos on mobile */
+  .session-33-1 .group-98-5 .mask-group-6,
+  .session-33-1 .group-99-17 .mask-group-18 {
+    width: 100% !important;
+    border-radius: 10px !important;
+  }
+
+  .session-33-1 .text-28 {
+    top: 100px !important;
+    font-size: 16px !important;
+    padding: 10px 20px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .session-33-1 .bear-stand-1-80 {
+    width: 80px !important;
+  }
+
+  .session-33-1 .rectangle-73-2,
+  .session-33-1 .rectangle-76-3 {
+    height: 60px !important;
+  }
+
+  .session-33-1 .frame-48430-75 .text-77,
+  .session-33-1 .frame-48430-75 .text-78,
+  .session-33-1 .frame-48431-69 .text-71,
+  .session-33-1 .frame-48431-69 .text-72,
+  .session-33-1 .frame-48431-69 .text-73 {
+    font-size: 32px !important;
+  }
+}
+
+/* existing CSS above */
+
+/* ========= FRONT PAGE LAYOUT FIX ========= */
+.page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* more new rules... */
+/* =========================================
+   FRONT PAGE – CLEAN ALIGNMENT OVERRIDES
+   ========================================= */
+
+.page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Text readability */
+.text-6,
+.text-22,
+.text-23 {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+/* Center heading rows */
+.frame-48384-3,
+.frame-48399-7 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Image block centering */
+.mask-group-10,
+.frame-16 {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Prevent random spacing bugs */
+p {
+  margin: 0;
+}
+
+/* Mobile safety */
+@media (max-width: 768px) {
+  .page {
+    padding: 0 16px;
+  }
+
+  .frame-48384-3,
+  .frame-48399-7 {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* ============================================
+   WEEK 1 - ALIGNMENT FIXES
+   ============================================ */
+
+/* Week 1 Page Container */
+.week-1-page {
+  position: relative;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.week-1-page main {
+  padding-top: 80px;
+}
+
+/* Week Hero Banner */
+.week-1-page .week-hero-banner {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.week-1-page .week-hero-image {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+}
+
+/* Exercise Section */
+.week-1-page .exercise-section-main {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto 80px;
+  padding: 60px 20px;
+}
+
+/* Exercise Title */
+.week-1-page .exercise-main-title {
+  font-family: 'MyType', 'Bebas Neue', sans-serif;
+  font-size: clamp(48px, 8vw, 96px);
+  line-height: 1.1;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* Title Colors - BREATHING LIKE A PRO */
+/* B, A, N, L, E, R (in PRO) = Blue */
+.week-1-page .title-b,
+.week-1-page .title-a,
+.week-1-page .title-n,
+.week-1-page .title-l,
+.week-1-page .title-e2,
+.week-1-page .title-r2 {
+  color: #5BA3E0;
+}
+
+/* R, T, G, I (in LIKE), A (in "A"), O = Pink/Magenta */
+.week-1-page .title-r,
+.week-1-page .title-t,
+.week-1-page .title-g,
+.week-1-page .title-i2,
+.week-1-page .title-a2,
+.week-1-page .title-o {
+  color: #E94A8A;
+}
+
+/* E, H, I, K, P = Green/Lime */
+.week-1-page .title-e1,
+.week-1-page .title-h,
+.week-1-page .title-i,
+.week-1-page .title-k,
+.week-1-page .title-p {
+  color: #B4D957;
+}
+
+/* Exercise Intro */
+.week-1-page .exercise-intro-text {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 40px;
+}
+
+.week-1-page .exercise-number {
+  font-family: 'Lato', sans-serif;
+  font-size: clamp(20px, 3vw, 28px);
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #1F2937;
+}
+
+.week-1-page .exercise-description {
+  font-family: 'Lato', sans-serif;
+  font-size: clamp(16px, 2vw, 18px);
+  line-height: 1.6;
+  color: #4B5563;
+}
+
+/* Video Container */
+.week-1-page .video-section-container {
+  position: relative;
+  max-width: 900px;
+  margin: 40px auto;
+}
+
+.week-1-page .video-thumbnail-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 15px;
+  overflow: visible;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.week-1-page .video-thumbnail-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+  background: #000;
+  display: block;
+}
+
+/* EXERCISE 1 - Blue Rectangle & Bear (LEFT) */
+.week-1-page .blue-rectangle-below-thumbnail {
+  position: absolute;
+  left: -80px;
+  bottom: -60px;
+  width: 180px;
+  height: 450px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.week-1-page .blue-rectangle {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 127px;
+  height: 404px;
+  background-color: #4169B8;
+  z-index: 1;
+}
+
+.week-1-page .bear-on-blue-block {
+  position: absolute;
+  left: 10px;
+  bottom: 0;
+  width: 150px;
+  height: auto;
+  z-index: 3;
+}
+
+.week-1-page .bear-sign-asset {
+  width: 140px !important;
+  height: auto !important;
+  object-fit: contain;
+  display: block;
+}
+
+/* EXERCISE 2 - Blue Rectangle (RIGHT) */
+.week-1-page .blue-rectangle-top-right {
+  position: absolute;
+  right: -80px;
+  bottom: -60px;
+  width: 150px;
+  height: 300px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.week-1-page .exercise-section-main:nth-of-type(2) .blue-rectangle {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 97px;
+  height: 251px;
+  background-color: #4169B8;
+  z-index: 1;
+}
+
+/* ============================================
+   RESPONSIVE - WEEK 1
+   ============================================ */
+
+@media (max-width: 1024px) {
+  .week-1-page .exercise-section-main {
+    padding: 40px 16px;
+    margin-bottom: 60px;
+  }
+
+  .week-1-page .blue-rectangle-below-thumbnail {
+    left: -60px;
+    width: 160px;
+  }
+
+  .week-1-page .blue-rectangle-top-right {
+    right: -60px;
+    width: 130px;
+  }
+}
+
+@media (max-width: 768px) {
+  .week-1-page main {
+    padding-top: 120px;
+  }
+
+  .week-1-page .week-hero-image {
+    max-width: 250px;
+  }
+
+  .week-1-page .exercise-section-main {
+    padding: 30px 16px;
+    margin-bottom: 40px;
+  }
+
+  .week-1-page .exercise-main-title {
+    font-size: clamp(32px, 6vw, 56px);
+  }
+
+  .week-1-page .video-section-container {
+    max-width: 100%;
+    padding: 0 16px;
+  }
+
+  /* Stack decorations below video on mobile */
+  .week-1-page .blue-rectangle-below-thumbnail {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 150px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .week-1-page .blue-rectangle {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    height: 100px;
+    left: 0;
+  }
+
+  .week-1-page .bear-on-blue-block {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 10px;
+    width: 120px;
+  }
+
+  .week-1-page .bear-sign-asset {
+    width: 100px !important;
+  }
+
+  .week-1-page .blue-rectangle-top-right {
+    position: relative;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 120px;
+    margin-top: 20px;
+  }
+
+  .week-1-page .exercise-section-main:nth-of-type(2) .blue-rectangle {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    height: 100px;
+    right: 0;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .week-1-page .week-hero-image {
+    max-width: 200px;
+  }
+
+  .week-1-page .exercise-main-title {
+    font-size: clamp(28px, 5vw, 40px);
+  }
+
+  .week-1-page .bear-sign-asset {
+    width: 80px !important;
+  }
+}
+
+/* ============================================
+   WEEK 2 - ALIGNMENT FIXES (CYAN STRIPS)
+   ============================================ */
+
+.week-2-page {
+  position: relative;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.week-2-page main {
+  padding-top: 80px;
+}
+
+.week-2-page .week-hero-banner {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.week-2-page .week-hero-image {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+}
+
+.week-2-page .exercise-section-main {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto 80px;
+  padding: 60px 20px;
+}
+
+.week-2-page .video-section-container {
+  position: relative;
+  max-width: 900px;
+  margin: 40px auto;
+}
+
+.week-2-page .video-thumbnail-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 15px;
+  overflow: visible;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.week-2-page .video-thumbnail-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+  background: #000;
+  display: block;
+}
+
+.week-2-page .blue-rectangle-below-thumbnail {
+  position: absolute;
+  left: -80px;
+  bottom: -60px;
+  width: 180px;
+  height: 450px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.week-2-page .blue-rectangle {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 127px;
+  height: 404px;
+  background-color: #5BC5C6;
+  z-index: 1;
+}
+
+.week-2-page .bear-on-blue-block {
+  position: absolute;
+  left: 10px;
+  bottom: 0;
+  width: 150px;
+  height: auto;
+  z-index: 3;
+}
+
+.week-2-page .bear-sign-asset {
+  width: 140px !important;
+  height: auto !important;
+  object-fit: contain;
+  display: block;
+}
+
+.week-2-page .blue-rectangle-top-right {
+  position: absolute;
+  right: -80px;
+  bottom: -60px;
+  width: 150px;
+  height: 300px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.week-2-page .exercise-section-main:nth-of-type(2) .blue-rectangle {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 97px;
+  height: 251px;
+  background-color: #5BC5C6;
+  z-index: 1;
+}
+
+@media (max-width: 1024px) {
+  .week-2-page .exercise-section-main {
+    padding: 40px 16px;
+    margin-bottom: 60px;
+  }
+
+  .week-2-page .blue-rectangle-below-thumbnail {
+    left: -60px;
+    width: 160px;
+  }
+
+  .week-2-page .blue-rectangle-top-right {
+    right: -60px;
+    width: 130px;
+  }
+}
+
+@media (max-width: 768px) {
+  .week-2-page main {
+    padding-top: 120px;
+  }
+
+  .week-2-page .week-hero-image {
+    max-width: 250px;
+  }
+
+  .week-2-page .exercise-section-main {
+    padding: 30px 16px;
+    margin-bottom: 40px;
+  }
+
+  .week-2-page .video-section-container {
+    max-width: 100%;
+    padding: 0 16px;
+  }
+
+  .week-2-page .blue-rectangle-below-thumbnail {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 150px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .week-2-page .blue-rectangle {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    height: 100px;
+    left: 0;
+  }
+
+  .week-2-page .bear-on-blue-block {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 10px;
+    width: 120px;
+  }
+
+  .week-2-page .bear-sign-asset {
+    width: 100px !important;
+  }
+
+  .week-2-page .blue-rectangle-top-right {
+    position: relative;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 120px;
+    margin-top: 20px;
+  }
+
+  .week-2-page .exercise-section-main:nth-of-type(2) .blue-rectangle {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    height: 100px;
+    right: 0;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .week-2-page .week-hero-image {
+    max-width: 200px;
+  }
+
+  .week-2-page .bear-sign-asset {
+    width: 80px !important;
+  }
+}
+
+/* ============================================
+   WEEK 3 - ALIGNMENT FIXES (PINK STRIPS)
+   ============================================ */
+
+.week-3-page {
+  position: relative;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.week-3-page main {
+  padding-top: 80px;
+}
+
+.week-3-page .week-hero-banner {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.week-3-page .week-hero-image {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+}
+
+.week-3-page .exercise-section-main {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto 80px;
+  padding: 60px 20px;
+}
+
+.week-3-page .video-section-container {
+  position: relative;
+  max-width: 900px;
+  margin: 40px auto;
+}
+
+.week-3-page .video-thumbnail-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 15px;
+  overflow: visible;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.week-3-page .video-thumbnail-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+  background: #000;
+  display: block;
+}
+
+.week-3-page .blue-rectangle-below-thumbnail {
+  position: absolute;
+  left: -80px;
+  bottom: -60px;
+  width: 180px;
+  height: 450px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.week-3-page .blue-rectangle {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 127px;
+  height: 404px;
+  background-color: #E94A8A;
+  z-index: 1;
+}
+
+.week-3-page .bear-on-blue-block {
+  position: absolute;
+  left: 10px;
+  bottom: 0;
+  width: 150px;
+  height: auto;
+  z-index: 3;
+}
+
+.week-3-page .bear-sign-asset {
+  width: 140px !important;
+  height: auto !important;
+  object-fit: contain;
+  display: block;
+}
+
+.week-3-page .blue-rectangle-top-right {
+  position: absolute;
+  right: -80px;
+  bottom: -60px;
+  width: 150px;
+  height: 300px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.week-3-page .exercise-section-main:nth-of-type(2) .blue-rectangle {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 97px;
+  height: 251px;
+  background-color: #E94A8A;
+  z-index: 1;
+}
+
+@media (max-width: 1024px) {
+  .week-3-page .exercise-section-main {
+    padding: 40px 16px;
+    margin-bottom: 60px;
+  }
+
+  .week-3-page .blue-rectangle-below-thumbnail {
+    left: -60px;
+    width: 160px;
+  }
+
+  .week-3-page .blue-rectangle-top-right {
+    right: -60px;
+    width: 130px;
+  }
+}
+
+@media (max-width: 768px) {
+  .week-3-page main {
+    padding-top: 120px;
+  }
+
+  .week-3-page .week-hero-image {
+    max-width: 250px;
+  }
+
+  .week-3-page .exercise-section-main {
+    padding: 30px 16px;
+    margin-bottom: 40px;
+  }
+
+  .week-3-page .video-section-container {
+    max-width: 100%;
+    padding: 0 16px;
+  }
+
+  .week-3-page .blue-rectangle-below-thumbnail {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 150px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .week-3-page .blue-rectangle {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    height: 100px;
+    left: 0;
+  }
+
+  .week-3-page .bear-on-blue-block {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 10px;
+    width: 120px;
+  }
+
+  .week-3-page .bear-sign-asset {
+    width: 100px !important;
+  }
+
+  .week-3-page .blue-rectangle-top-right {
+    position: relative;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 120px;
+    margin-top: 20px;
+  }
+
+  .week-3-page .exercise-section-main:nth-of-type(2) .blue-rectangle {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    height: 100px;
+    right: 0;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .week-3-page .week-hero-image {
+    max-width: 200px;
+  }
+
+  .week-3-page .bear-sign-asset {
+    width: 80px !important;
+  }
+}
+
+/* ============================================
+   WEEK 4 - ALIGNMENT FIXES (YELLOW STRIPS)
+   ============================================ */
+
+.week-4-page {
+  position: relative;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.week-4-page main {
+  padding-top: 80px;
+}
+
+.week-4-page .week-hero-banner {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.week-4-page .week-hero-image {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+}
+
+.week-4-page .exercise-section-main {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto 80px;
+  padding: 60px 20px;
+}
+
+.week-4-page .video-section-container {
+  position: relative;
+  max-width: 900px;
+  margin: 40px auto;
+}
+
+.week-4-page .video-thumbnail-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 15px;
+  overflow: visible;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.week-4-page .video-thumbnail-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+  background: #000;
+  display: block;
+}
+
+.week-4-page .blue-rectangle-below-thumbnail {
+  position: absolute;
+  left: -80px;
+  bottom: -60px;
+  width: 180px;
+  height: 450px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.week-4-page .blue-rectangle {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 127px;
+  height: 404px;
+  background-color: #FBBF24;
+  z-index: 1;
+}
+
+.week-4-page .bear-on-blue-block {
+  position: absolute;
+  left: 10px;
+  bottom: 0;
+  width: 150px;
+  height: auto;
+  z-index: 3;
+}
+
+.week-4-page .bear-sign-asset {
+  width: 140px !important;
+  height: auto !important;
+  object-fit: contain;
+  display: block;
+}
+
+.week-4-page .blue-rectangle-top-right {
+  position: absolute;
+  right: -80px;
+  bottom: -60px;
+  width: 150px;
+  height: 300px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.week-4-page .exercise-section-main:nth-of-type(2) .blue-rectangle {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 97px;
+  height: 251px;
+  background-color: #FBBF24;
+  z-index: 1;
+}
+
+@media (max-width: 1024px) {
+  .week-4-page .exercise-section-main {
+    padding: 40px 16px;
+    margin-bottom: 60px;
+  }
+
+  .week-4-page .blue-rectangle-below-thumbnail {
+    left: -60px;
+    width: 160px;
+  }
+
+  .week-4-page .blue-rectangle-top-right {
+    right: -60px;
+    width: 130px;
+  }
+}
+
+@media (max-width: 768px) {
+  .week-4-page main {
+    padding-top: 120px;
+  }
+
+  .week-4-page .week-hero-image {
+    max-width: 250px;
+  }
+
+  .week-4-page .exercise-section-main {
+    padding: 30px 16px;
+    margin-bottom: 40px;
+  }
+
+  .week-4-page .video-section-container {
+    max-width: 100%;
+    padding: 0 16px;
+  }
+
+  .week-4-page .blue-rectangle-below-thumbnail {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 150px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .week-4-page .blue-rectangle {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    height: 100px;
+    left: 0;
+  }
+
+  .week-4-page .bear-on-blue-block {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 10px;
+    width: 120px;
+  }
+
+  .week-4-page .bear-sign-asset {
+    width: 100px !important;
+  }
+
+  .week-4-page .blue-rectangle-top-right {
+    position: relative;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 120px;
+    margin-top: 20px;
+  }
+
+  .week-4-page .exercise-section-main:nth-of-type(2) .blue-rectangle {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    height: 100px;
+    right: 0;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .week-4-page .week-hero-image {
+    max-width: 200px;
+  }
+
+  .week-4-page .bear-sign-asset {
+    width: 80px !important;
+  }
+}
+
+/* ============================================
+   WEEK 5 - ALIGNMENT FIXES (ORANGE STRIPS)
+   ============================================ */
+
+.week-5-page {
+  position: relative;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.week-5-page main {
+  padding-top: 80px;
+}
+
+.week-5-page .week-hero-banner {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.week-5-page .week-hero-image {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+}
+
+.week-5-page .exercise-section-main {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto 80px;
+  padding: 60px 20px;
+}
+
+.week-5-page .video-section-container {
+  position: relative;
+  max-width: 900px;
+  margin: 40px auto;
+}
+
+.week-5-page .video-thumbnail-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 15px;
+  overflow: visible;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.week-5-page .video-thumbnail-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+  background: #000;
+  display: block;
+}
+
+.week-5-page .blue-rectangle-below-thumbnail {
+  position: absolute;
+  left: -80px;
+  bottom: -60px;
+  width: 180px;
+  height: 450px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.week-5-page .blue-rectangle {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 127px;
+  height: 404px;
+  background-color: #F97316;
+  z-index: 1;
+}
+
+.week-5-page .bear-on-blue-block {
+  position: absolute;
+  left: 10px;
+  bottom: 0;
+  width: 150px;
+  height: auto;
+  z-index: 3;
+}
+
+.week-5-page .bear-sign-asset {
+  width: 140px !important;
+  height: auto !important;
+  object-fit: contain;
+  display: block;
+}
+
+.week-5-page .blue-rectangle-top-right {
+  position: absolute;
+  right: -80px;
+  bottom: -60px;
+  width: 150px;
+  height: 300px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.week-5-page .exercise-section-main:nth-of-type(2) .blue-rectangle {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 97px;
+  height: 251px;
+  background-color: #F97316;
+  z-index: 1;
+}
+
+@media (max-width: 1024px) {
+  .week-5-page .exercise-section-main {
+    padding: 40px 16px;
+    margin-bottom: 60px;
+  }
+
+  .week-5-page .blue-rectangle-below-thumbnail {
+    left: -60px;
+    width: 160px;
+  }
+
+  .week-5-page .blue-rectangle-top-right {
+    right: -60px;
+    width: 130px;
+  }
+}
+
+@media (max-width: 768px) {
+  .week-5-page main {
+    padding-top: 120px;
+  }
+
+  .week-5-page .week-hero-image {
+    max-width: 250px;
+  }
+
+  .week-5-page .exercise-section-main {
+    padding: 30px 16px;
+    margin-bottom: 40px;
+  }
+
+  .week-5-page .video-section-container {
+    max-width: 100%;
+    padding: 0 16px;
+  }
+
+  .week-5-page .blue-rectangle-below-thumbnail {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 150px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .week-5-page .blue-rectangle {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    height: 100px;
+    left: 0;
+  }
+
+  .week-5-page .bear-on-blue-block {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 10px;
+    width: 120px;
+  }
+
+  .week-5-page .bear-sign-asset {
+    width: 100px !important;
+  }
+
+  .week-5-page .blue-rectangle-top-right {
+    position: relative;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 120px;
+    margin-top: 20px;
+  }
+
+  .week-5-page .exercise-section-main:nth-of-type(2) .blue-rectangle {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    height: 100px;
+    right: 0;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .week-5-page .week-hero-image {
+    max-width: 200px;
+  }
+
+  .week-5-page .bear-sign-asset {
+    width: 80px !important;
+  }
+}
+
+/* ============================================
+   WEEK 6 - ALIGNMENT FIXES (BEIGE RECTANGLE + FISH)
+   ============================================ */
+
+.week-6-page {
+  position: relative;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.week-6-page main {
+  padding-top: 80px;
+}
+
+.week-6-page .week-hero-banner {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.week-6-page .week-hero-image {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+}
+
+.week-6-page .exercise-section-main {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto 80px;
+  padding: 60px 20px;
+}
+
+.week-6-page .video-section-container {
+  position: relative;
+  max-width: 900px;
+  margin: 40px auto;
+}
+
+.week-6-page .video-thumbnail-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 15px;
+  overflow: visible;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  z-index: 5;
+}
+
+.week-6-page .video-thumbnail-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+  background: #000;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .week-6-page main {
+    padding-top: 120px;
+  }
+
+  .week-6-page .week-hero-image {
+    max-width: 250px;
+  }
+
+  .week-6-page .exercise-section-main {
+    padding: 30px 16px;
+    margin-bottom: 40px;
+  }
+
+  .week-6-page .video-section-container {
+    max-width: 100%;
+    padding: 0 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .week-6-page .week-hero-image {
+    max-width: 200px;
+  }
+}
+
+/* ============================================
+   WEEK 3 POSITIONING FIX - ADD TO END OF styles.css
+   Works with Figma export HTML (session-33-1)
+   Matches Week3.jpg layout exactly
+   ============================================ */
+
+/* Main Container Fix */
+.session-33-1 {
+  position: relative !important;
+  width: 100% !important;
+  max-width: 100vw !important;
+  min-height: 100vh !important;
+  overflow-x: hidden !important;
+  background-color: rgba(255, 255, 255, 1) !important;
+}
+
+/* LEFT PINK STRIP - Exercise 1 */
+.rectangle-73-2 {
+  position: absolute !important;
+  left: 50px !important;
+  top: 600px !important;
+  width: 100px !important;
+  height: 500px !important;
+  background-color: #E94A8A !important;
+  z-index: 1 !important;
+}
+
+/* RIGHT PINK STRIP - Exercise 2 */
+.rectangle-76-3 {
+  position: absolute !important;
+  right: 50px !important;
+  top: 1400px !important;
+  width: 90px !important;
+  height: 450px !important;
+  background-color: #E94A8A !important;
+  z-index: 1 !important;
+}
+
+/* Week 3 Badge */
+.w2-81 {
+  display: block !important;
+  max-width: 300px !important;
+  margin: 80px auto 40px !important;
+  width: 100% !important;
+  height: auto !important;
+  position: relative !important;
+  z-index: 10 !important;
+}
+
+/* ABC Logo */
+.abc-logo-1-95 {
+  max-width: 150px !important;
+  height: auto !important;
+}
+
+/* Navigation Logo */
+.image-6-94 {
+  max-width: 120px !important;
+  height: auto !important;
+}
+
+/* Character (Sheep) - Bottom of Left Strip */
+.bear-stand-1-80 {
+  position: absolute !important;
+  left: 60px !important;
+  top: 1000px !important;
+  width: 110px !important;
+  height: auto !important;
+  z-index: 3 !important;
+}
+
+/* Exercise 1 Container */
+.frame-48430-75 {
+  position: relative !important;
+  max-width: 900px !important;
+  margin: 60px auto 40px !important;
+  padding: 0 20px !important;
+  text-align: center !important;
+  z-index: 10 !important;
+}
+
+/* Exercise 2 Container */
+.frame-48431-69 {
+  position: relative !important;
+  max-width: 900px !important;
+  margin: 100px auto 40px !important;
+  padding: 0 20px !important;
+  text-align: center !important;
+  z-index: 10 !important;
+}
+
+/* Exercise Titles */
+.frame-48430-75 .group-106-76,
+.frame-48431-69 .group-106-70 {
+  margin-bottom: 20px !important;
+}
+
+.text-77,
+.text-78,
+.text-71,
+.text-72,
+.text-73 {
+  font-size: clamp(36px, 6vw, 72px) !important;
+  font-weight: 900 !important;
+  line-height: 1.1 !important;
+  margin: 5px 0 !important;
+}
+
+/* Exercise Descriptions */
+.text-74,
+.text-79 {
+  font-size: clamp(16px, 2vw, 18px) !important;
+  line-height: 1.6 !important;
+  max-width: 700px !important;
+  margin: 20px auto !important;
+  text-align: center !important;
+}
+
+/* VIDEO CONTAINERS */
+
+/* Exercise 1 Video */
+.group-98-5 {
+  position: relative !important;
+  max-width: 650px !important;
+  margin: 40px auto 80px !important;
+  padding: 0 20px !important;
+  z-index: 5 !important;
+}
+
+.group-98-5 .mask-group-6 {
+  position: relative !important;
+  width: 100% !important;
+  aspect-ratio: 16 / 9 !important;
+  border-radius: 15px !important;
+  overflow: visible !important;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3) !important;
+}
+
+.mask-group-6 .rectangle-24-7 {
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: 15px !important;
+}
+
+.mask-group-8 {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.image-3-10 {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  border-radius: 15px !important;
+}
+
+/* Exercise 1 Lock Overlay */
+.group-98-5 .group-97-11 {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  z-index: 20 !important;
+}
+
+.group-98-5 .rectangle-26-12 {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: 15px !important;
+}
+
+.group-98-5 .group-13 {
+  position: relative !important;
+  z-index: 25 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* Exercise 2 Video */
+.group-99-17 {
+  position: relative !important;
+  max-width: 650px !important;
+  margin: 40px auto 80px !important;
+  padding: 0 20px !important;
+  z-index: 5 !important;
+}
+
+.group-99-17 .mask-group-18 {
+  position: relative !important;
+  width: 100% !important;
+  aspect-ratio: 16 / 9 !important;
+  border-radius: 15px !important;
+  overflow: visible !important;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3) !important;
+}
+
+.mask-group-18 .rectangle-24-19 {
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: 15px !important;
+}
+
+.mask-group-20 {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.image-3-22 {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  border-radius: 15px !important;
+}
+
+/* Exercise 2 Lock Overlay */
+.group-99-17 .rectangle-31-23 {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: 15px !important;
+}
+
+.group-99-17 .group-24 {
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  z-index: 25 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* Lock Message */
+.text-28 {
+  max-width: 800px !important;
+  margin: 20px auto !important;
+  padding: 15px 30px !important;
+  text-align: center !important;
+  background: #FEF3C7 !important;
+  border: 2px solid #FCD34D !important;
+  border-radius: 8px !important;
+  font-size: clamp(14px, 2vw, 18px) !important;
+  font-weight: 600 !important;
+  color: #92400E !important;
+  position: relative !important;
+  z-index: 100 !important;
+}
+
+/* Navigation Bar */
+.navbar-2-82 {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(10px) !important;
+  padding: 15px 20px !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) !important;
+  z-index: 1000 !important;
+}
+
+.navbar-2-82 .container-83 {
+  max-width: 1440px !important;
+  margin: 0 auto !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 20px !important;
+}
+
+.node-84 {
+  max-height: 50px !important;
+  width: auto !important;
+}
+
+/* Navigation Links */
+.frame-48439-88 {
+  display: flex !important;
+  gap: 20px !important;
+  align-items: center !important;
+}
+
+.text-91,
+.text-92,
+.text-93 {
+  cursor: pointer !important;
+  transition: color 0.3s ease !important;
+}
+
+/* Donate Button */
+.button-86 {
+  background: #E94A8A !important;
+  padding: 10px 24px !important;
+  border-radius: 5px !important;
+  cursor: pointer !important;
+  transition: background 0.3s ease !important;
+}
+
+.button-86:hover {
+  background: #D13A7A !important;
+}
+
+/* Footer */
+.section-29 {
+  background: #3C3B34 !important;
+  padding: 60px 20px 40px !important;
+  margin-top: 80px !important;
+}
+
+/* Newsletter Form */
+.form-32 {
+  max-width: 600px !important;
+  margin: 30px auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 15px !important;
+}
+
+/* Submit Button */
+.button-42 {
+  background: #EE9E30 !important;
+  padding: 12px 24px !important;
+  border-radius: 5px !important;
+  cursor: pointer !important;
+  transition: background 0.3s ease !important;
+}
+
+.button-42:hover {
+  background: #D88E20 !important;
+}
+
+/* Social Icons */
+.list-44 {
+  display: flex !important;
+  gap: 15px !important;
+  justify-content: center !important;
+  margin: 30px auto !important;
+}
+
+/* ============================================
+   RESPONSIVE - MOBILE & TABLET
+   ============================================ */
+
+@media (max-width: 1024px) {
+  .rectangle-73-2 {
+    left: 30px !important;
+    width: 80px !important;
+    height: 400px !important;
+  }
+
+  .rectangle-76-3 {
+    right: 30px !important;
+    width: 70px !important;
+    height: 350px !important;
+  }
+
+  .bear-stand-1-80 {
+    left: 40px !important;
+    width: 90px !important;
+  }
+
+  .group-98-5,
+  .group-99-17 {
+    max-width: 550px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .session-33-1 {
+    padding-top: 120px !important;
+  }
+
+  /* Stack pink strips horizontally on mobile */
+  .rectangle-73-2 {
+    position: relative !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 100% !important;
+    height: 100px !important;
+    margin: 20px 0 !important;
+  }
+
+  .rectangle-76-3 {
+    position: relative !important;
+    right: 0 !important;
+    top: 0 !important;
+    width: 100% !important;
+    height: 100px !important;
+    margin: 20px 0 !important;
+  }
+
+  /* Center character on mobile */
+  .bear-stand-1-80 {
+    position: relative !important;
+    left: 0 !important;
+    top: 0 !important;
+    margin: 20px auto !important;
+    display: block !important;
+    width: 120px !important;
+  }
+
+  /* Full width videos on mobile */
+  .group-98-5,
+  .group-99-17 {
+    max-width: 100% !important;
+    padding: 0 16px !important;
+  }
+
+  /* Stack navbar items */
+  .navbar-2-82 .container-83 {
+    flex-direction: column !important;
+    gap: 15px !important;
+  }
+
+  .frame-48439-88 {
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 15px !important;
+  }
+
+  .text-77,
+  .text-78,
+  .text-71,
+  .text-72,
+  .text-73 {
+    font-size: clamp(28px, 5vw, 48px) !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .w2-81 {
+    max-width: 200px !important;
+  }
+
+  .bear-stand-1-80 {
+    width: 100px !important;
+  }
+
+  .text-77,
+  .text-78,
+  .text-71,
+  .text-72,
+  .text-73 {
+    font-size: clamp(24px, 4vw, 36px) !important;
+  }
+
+  .text-28 {
+    font-size: 14px !important;
+    padding: 12px 20px !important;
+  }
+}
+
+/* Prevent horizontal overflow */
+.session-33-1 *,
+.session-33-1 *::before,
+.session-33-1 *::after {
+  max-width: 100% !important;
+}

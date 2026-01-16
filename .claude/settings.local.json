@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir \"C:\\\\Users\\\\Superman\\\\Downloads\\\\Cambridge-VoH-ABC-LP-main\\\\public\\\\assets\\\\videos\"\")",
+      "Bash(powershell:*)"
+    ]
+  }
+}

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +8,11 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:wght@400;700;900&family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:wght@400;700;900&family=Oswald:wght@400;500;600&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="alignment-fix.css">
   <style>
     .bear-sign-asset {
       width: clamp(80px, 10vw, 140px) !important;
@@ -16,6 +20,7 @@
       min-width: 80px !important;
       max-width: 140px !important;
     }
+
     @media (max-width: 768px) {
       .bear-sign-asset {
         width: clamp(60px, 12vw, 100px) !important;
@@ -25,6 +30,7 @@
     }
   </style>
 </head>
+
 <body>
   <div class="week-4-page">
     <!-- Header -->
@@ -99,7 +105,8 @@
 
           <div class="video-section-container">
             <div class="video-thumbnail-wrapper">
-              <video controls class="video-thumbnail-img" preload="metadata" playsinline>
+              <video controls class="video-thumbnail-img" data-week="4" data-exercise="1" preload="metadata"
+                playsinline>
                 <source src="./assets/videos/Session 4 - excercise 12 final.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
@@ -176,7 +183,8 @@
 
       <!-- Navigation -->
       <section style="padding: 2rem; text-align: center; background: #f3f4f6;">
-        <h3 style="font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; margin-bottom: 1rem; color: #374151;">Continue Your Journey</h3>
+        <h3 style="font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; margin-bottom: 1rem; color: #374151;">
+          Continue Your Journey</h3>
         <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
           <a href="week-1.html" class="btn-view-exercises btn-blue" style="min-width: 150px;">Week 1</a>
           <a href="week-2.html" class="btn-view-exercises btn-teal" style="min-width: 150px;">Week 2</a>
@@ -205,7 +213,8 @@
             <img src="./assets/images/Listitem  Link-3.png" alt="YouTube" class="social-icon">
           </div>
           <div class="footer-info">
-            <p class="footer-contact">info@voh.org.uk &nbsp;&nbsp;&nbsp; 161A Clarence Street, Kingston-Upon-Thames, Surrey KT1 1QT</p>
+            <p class="footer-contact">info@voh.org.uk &nbsp;&nbsp;&nbsp; 161A Clarence Street, Kingston-Upon-Thames,
+              Surrey KT1 1QT</p>
             <p class="footer-charity">UK Charity Commission Registration 1187454</p>
             <p class="footer-privacy">Privacy Policy</p>
             <div class="footer-bottom-line">
@@ -231,5 +240,7 @@
   </div>
 
   <script src="script.js"></script>
+  <script src="video-lock.js"></script>
 </body>
+
 </html>

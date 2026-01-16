@@ -1,33 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Week 3 - Big Breathing Adventure</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:wght@400;700;900&family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <style>
-    .bear-sign-asset {
-      width: clamp(80px, 10vw, 140px) !important;
-      height: auto !important;
-      min-width: 80px !important;
-      max-width: 140px !important;
-    }
-    @media (max-width: 768px) {
-      .bear-sign-asset {
-        width: clamp(60px, 12vw, 100px) !important;
-        min-width: 60px !important;
-        max-width: 100px !important;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 3 - Big Breathing Adventure</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:wght@400;700;900&family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        /* ========================================
+   WEEK 3 - PINK STRIP BEHIND VIDEO
+   ======================================== */
+
+        /* EXERCISE 1 - LEFT PINK STRIP BEHIND VIDEO */
+        .exercise-section-main:first-of-type .blue-rectangle-below-thumbnail {
+            position: absolute;
+            left: 0px; /* Start at container edge */
+            bottom: 0;
+            width: 200px; /* Container width */
+            height: 450px; /* Container height */
+            z-index: 1; /* Behind video */
+        }
+
+        .exercise-section-main:first-of-type .blue-rectangle {
+            position: absolute;
+            left: 50px; /* Position from left edge */
+            bottom: 0;
+            width: 100px; /* Strip width */
+            height: 500px; /* Strip height */
+            background-color: #E94A8A; /* Pink color */
+            z-index: 1; /* Behind video */
+        }
+
+        .exercise-section-main:first-of-type .bear-on-blue-block {
+            position: absolute;
+            left: 60px; /* Bear position on strip */
+            bottom: 20px; /* Above bottom edge */
+            width: 110px;
+            height: auto;
+            z-index: 3; /* Above strip, below video */
+        }
+
+        .exercise-section-main:first-of-type .bear-sign-asset {
+            width: 110px !important;
+            height: auto !important;
+            max-width: 110px !important;
+            min-width: 110px !important;
+        }
+
+        /* EXERCISE 2 - RIGHT PINK STRIP BEHIND VIDEO */
+        .exercise-section-main:nth-of-type(2) .blue-rectangle-top-right {
+            position: absolute;
+            right: 0px; /* Start at container edge */
+            bottom: 0;
+            width: 150px; /* Container width */
+            height: 300px; /* Container height */
+            z-index: 1; /* Behind video */
+        }
+
+        .exercise-section-main:nth-of-type(2) .blue-rectangle {
+            position: absolute;
+            right: 50px; /* Position from right edge */
+            bottom: 0;
+            width: 90px; /* Strip width */
+            height: 400px; /* Strip height */
+            background-color: #E94A8A; /* Pink color */
+            z-index: 1; /* Behind video */
+        }
+
+        /* VIDEO CONTAINERS */
+        .video-section-container {
+            position: relative;
+            width: 100%;
+            max-width: 650px;
+            margin: 0 auto;
+            padding: 0 20px;
+            aspect-ratio: 16 / 9;
+            z-index: 5; /* ABOVE strips */
+        }
+
+        .video-thumbnail-wrapper {
+            position: relative;
+            width: 100%;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .video-thumbnail-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 15px;
+            position: relative;
+            z-index: 5; /* Video on top */
+        }
+
+        /* EXERCISE SECTIONS */
+        .exercise-section-main {
+            position: relative;
+            width: 100%;
+            padding: 60px 20px;
+            margin-bottom: 80px;
+        }
+
+        .exercise-content-wrapper {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* ========================================
+           MOBILE RESPONSIVE
+           ======================================== */
+        @media (max-width: 768px) {
+            /* Stack strips horizontally below videos */
+            .exercise-section-main:first-of-type .blue-rectangle-below-thumbnail,
+            .exercise-section-main:nth-of-type(2) .blue-rectangle-top-right {
+                position: relative;
+                left: 0;
+                right: 0;
+                width: 100%;
+                height: 80px;
+                margin: 20px 0;
+            }
+
+            .exercise-section-main:first-of-type .blue-rectangle,
+            .exercise-section-main:nth-of-type(2) .blue-rectangle {
+                position: relative;
+                left: 0;
+                right: 0;
+                width: 100%;
+                height: 60px;
+            }
+
+            .exercise-section-main:first-of-type .bear-on-blue-block {
+                position: relative;
+                left: 50%;
+                bottom: auto;
+                transform: translateX(-50%);
+                margin-top: 10px;
+            }
+
+            .exercise-section-main:first-of-type .bear-sign-asset {
+                width: 80px !important;
+                max-width: 80px !important;
+                min-width: 80px !important;
+            }
+
+            /* Full-width video containers on mobile */
+            .video-section-container {
+                max-width: 100%;
+                padding: 0 15px;
+            }
+        }
+    </style>
 </head>
+
 <body>
   <div class="week-3-page">
-    <!-- Header -->
+    
+    <!-- ========================================
+         HEADER
+         ======================================== -->
     <header class="header">
       <div class="header-content">
         <div class="header-left">
@@ -53,13 +192,23 @@
     </header>
 
     <main>
+      
+      <!-- ========================================
+           WEEK 3 BADGE
+           ======================================== -->
       <section class="week-hero-banner">
         <div class="week-hero-content">
           <img src="./assets/images/w3.png" alt="Week 3" class="week-hero-image">
         </div>
       </section>
 
+      <!-- ========================================
+           EXERCISE 1: BREATHING LIKE A PRO
+           Left pink strip + sitting bear
+           ======================================== -->
       <section class="exercise-section-main">
+        
+        <!-- Title -->
         <div class="exercise-title-section">
           <h1 class="exercise-main-title">
             <div class="title-line-1">
@@ -88,23 +237,29 @@
           </h1>
         </div>
 
+        <!-- Content -->
         <div class="exercise-content-wrapper">
           <div class="exercise-intro-text">
-            <h3 class="exercise-number"><strong>Exercise 6: Deep Breathing & Expanse Mastery</strong></h3>
+            <h3 class="exercise-number"><strong>Exercise 8: Deep Breathing & Increased Control</strong></h3>
             <p class="exercise-description">
               In this exercise, you'll learn how to take deep, controlled breaths. This will help you feel calm,
               focused, and in control of your body.
             </p>
           </div>
 
+          <!-- Video with Pink Strip and Bear -->
           <div class="video-section-container">
             <div class="video-thumbnail-wrapper">
-              <video controls class="video-thumbnail-img" preload="metadata" playsinline>
+              <video controls class="video-thumbnail-img" data-week="3" data-exercise="1" preload="metadata" playsinline>
                 <source src="./assets/videos/Session 3 - excercise 8 final.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
+              
+              <!-- Pink Strip Container (LEFT) -->
               <div class="blue-rectangle-below-thumbnail">
+                <!-- Pink Strip -->
                 <div class="blue-rectangle"></div>
+                <!-- Bear Character -->
                 <div class="bear-on-blue-block">
                   <img src="./assets/images/w1/sitting bear.png" alt="Bear sitting" class="bear-sign-asset">
                 </div>
@@ -114,7 +269,13 @@
         </div>
       </section>
 
+      <!-- ========================================
+           EXERCISE 2: STRENGTH BUILDING
+           Right pink strip only
+           ======================================== -->
       <section class="exercise-section-main">
+        
+        <!-- Title -->
         <div class="exercise-title-section">
           <h1 class="exercise-main-title">
             <div class="title-line-1">
@@ -154,22 +315,27 @@
           </h1>
         </div>
 
+        <!-- Content -->
         <div class="exercise-content-wrapper">
           <div class="exercise-intro-text">
-            <h3 class="exercise-number"><strong>Exercise 7: Straw Phonation - Stage 2</strong></h3>
+            <h3 class="exercise-number"><strong>Exercise 9: Straw Phonation - Stage 2</strong></h3>
             <p class="exercise-description">
               In this exercise, we'll be humming and blowing bubbles to help strengthen your breathing muscles. If
               you start feeling a bit out of breath, take a quick break and practice some deep belly breathing.
             </p>
           </div>
 
+          <!-- Video with Pink Strip (RIGHT) -->
           <div class="video-section-container">
             <div class="video-thumbnail-wrapper">
-              <video controls class="video-thumbnail-img" preload="metadata" playsinline>
+              <video controls class="video-thumbnail-img" data-week="3" data-exercise="2" preload="metadata" playsinline>
                 <source src="./assets/videos/session 3 - excercise 9 final.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
+              
+              <!-- Pink Strip Container (RIGHT) -->
               <div class="blue-rectangle-top-right">
+                <!-- Pink Strip -->
                 <div class="blue-rectangle"></div>
               </div>
             </div>
@@ -177,9 +343,12 @@
         </div>
       </section>
 
-      <!-- Navigation -->
+      <!-- ========================================
+           NAVIGATION TO OTHER WEEKS
+           ======================================== -->
       <section style="padding: 2rem; text-align: center; background: #f3f4f6;">
-        <h3 style="font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; margin-bottom: 1rem; color: #374151;">Continue Your Journey</h3>
+        <h3 style="font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; margin-bottom: 1rem; color: #374151;">
+          Continue Your Journey</h3>
         <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
           <a href="week-1.html" class="btn-view-exercises btn-blue" style="min-width: 150px;">Week 1</a>
           <a href="week-2.html" class="btn-view-exercises btn-teal" style="min-width: 150px;">Week 2</a>
@@ -189,7 +358,9 @@
         </div>
       </section>
 
-      <!-- Footer -->
+      <!-- ========================================
+           FOOTER
+           ======================================== -->
       <div class="footer-second-block">
         <div class="footer-newsletter">
           <h3>Sign up to our Newsletter</h3>
@@ -234,5 +405,7 @@
   </div>
 
   <script src="script.js"></script>
+  <script src="video-lock.js"></script>
 </body>
+
 </html>

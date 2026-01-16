@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +8,11 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:wght@400;700;900&family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:wght@400;700;900&family=Oswald:wght@400;500;600&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="alignment-fix.css">
   <style>
     .bear-sign-asset {
       width: clamp(80px, 10vw, 140px) !important;
@@ -16,6 +20,7 @@
       min-width: 80px !important;
       max-width: 140px !important;
     }
+
     @media (max-width: 768px) {
       .bear-sign-asset {
         width: clamp(60px, 12vw, 100px) !important;
@@ -25,6 +30,7 @@
     }
   </style>
 </head>
+
 <body>
   <div class="week-6-page">
     <!-- Header -->
@@ -91,25 +97,33 @@
               <span style="color: #2196F3;">E</span>
             </div>
           </h1>
-          <h3 class="week-6-subtitle" style="font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; color: #374151; margin-top: 1rem;"><strong>Goldfish Breathing</strong></h3>
+          <h3 class="week-6-subtitle"
+            style="font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; color: #374151; margin-top: 1rem;">
+            <strong>Goldfish Breathing</strong>
+          </h3>
         </div>
 
         <div class="exercise-content-wrapper">
           <div class="exercise-intro-text">
             <p class="exercise-description">
-              Make your goldfish lips and breathe in through your nose...Now blow out through your goldfish lips slowly. We will do this 3 times and see how long you can make your breath last for.
+              Make your goldfish lips and breathe in through your nose...Now blow out through your goldfish lips slowly.
+              We will do this 3 times and see how long you can make your breath last for.
             </p>
           </div>
 
           <div class="video-section-container" style="position: relative;">
             <!-- Rectangle decoration -->
-            <div style="position: absolute; top: -250px; right: 0; width: clamp(50px, 12vw, 70px); height: clamp(250px, 30vw, 350px); background-color: #F5DEB3; z-index: 1;"></div>
+            <div
+              style="position: absolute; top: -250px; right: 0; width: clamp(50px, 12vw, 70px); height: clamp(250px, 30vw, 350px); background-color: #F5DEB3; z-index: 1;">
+            </div>
 
             <!-- Fish decoration -->
-            <img src="./assets/images/w1/fish.png" alt="Fish" style="position: absolute; top: -250px; right: clamp(50px, 12vw, 70px); width: clamp(90px, 12vw, 140px); height: auto; z-index: 2;">
+            <img src="./assets/images/w1/fish.png" alt="Fish"
+              style="position: absolute; top: -250px; right: clamp(50px, 12vw, 70px); width: clamp(90px, 12vw, 140px); height: auto; z-index: 2;">
 
             <div class="video-thumbnail-wrapper" style="position: relative; z-index: 5;">
-              <video controls class="video-thumbnail-img" preload="metadata" playsinline>
+              <video controls class="video-thumbnail-img" data-week="6" data-exercise="1" preload="metadata"
+                playsinline>
                 <source src="./assets/videos/Sesssion 6 - excercise 19 final.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
@@ -119,17 +133,22 @@
       </section>
 
       <!-- Completion Message -->
-      <section style="padding: 3rem 2rem; text-align: center; background: linear-gradient(135deg, #10b981 0%, #059669 100%);">
-        <h2 style="font-family: 'Bebas Neue', sans-serif; font-size: 2.5rem; color: white; margin-bottom: 1rem;">Congratulations!</h2>
-        <p style="font-family: 'Lato', sans-serif; font-size: 1.25rem; color: white; max-width: 600px; margin: 0 auto 2rem;">
+      <section
+        style="padding: 3rem 2rem; text-align: center; background: linear-gradient(135deg, #10b981 0%, #059669 100%);">
+        <h2 style="font-family: 'Bebas Neue', sans-serif; font-size: 2.5rem; color: white; margin-bottom: 1rem;">
+          Congratulations!</h2>
+        <p
+          style="font-family: 'Lato', sans-serif; font-size: 1.25rem; color: white; max-width: 600px; margin: 0 auto 2rem;">
           You've completed the Big Breathing Adventure! You are now a certified Breathing Hero!
         </p>
-        <a href="index.html" class="btn-view-exercises" style="background: white; color: #10b981; min-width: 200px; font-size: 1.1rem;">Back to Home</a>
+        <a href="index.html" class="btn-view-exercises"
+          style="background: white; color: #10b981; min-width: 200px; font-size: 1.1rem;">Back to Home</a>
       </section>
 
       <!-- Navigation -->
       <section style="padding: 2rem; text-align: center; background: #f3f4f6;">
-        <h3 style="font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; margin-bottom: 1rem; color: #374151;">Review Previous Weeks</h3>
+        <h3 style="font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; margin-bottom: 1rem; color: #374151;">
+          Review Previous Weeks</h3>
         <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
           <a href="week-1.html" class="btn-view-exercises btn-blue" style="min-width: 150px;">Week 1</a>
           <a href="week-2.html" class="btn-view-exercises btn-teal" style="min-width: 150px;">Week 2</a>
@@ -158,7 +177,8 @@
             <img src="./assets/images/Listitem  Link-3.png" alt="YouTube" class="social-icon">
           </div>
           <div class="footer-info">
-            <p class="footer-contact">info@voh.org.uk &nbsp;&nbsp;&nbsp; 161A Clarence Street, Kingston-Upon-Thames, Surrey KT1 1QT</p>
+            <p class="footer-contact">info@voh.org.uk &nbsp;&nbsp;&nbsp; 161A Clarence Street, Kingston-Upon-Thames,
+              Surrey KT1 1QT</p>
             <p class="footer-charity">UK Charity Commission Registration 1187454</p>
             <p class="footer-privacy">Privacy Policy</p>
             <div class="footer-bottom-line">
@@ -184,5 +204,7 @@
   </div>
 
   <script src="script.js"></script>
+  <script src="video-lock.js"></script>
 </body>
+
 </html>

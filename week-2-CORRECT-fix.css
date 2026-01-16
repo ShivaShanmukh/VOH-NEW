@@ -1,0 +1,201 @@
+/* ============================================
+   WEEK 2 PAGE - CORRECT FIX FOR YOUR HTML
+   Targeting the actual classes in your HTML file
+   ============================================ */
+
+/* ============================================
+   BLUE/CYAN RECTANGLES (STRIPS)
+   ============================================ */
+
+/* First exercise - Blue rectangle on LEFT */
+.exercise-section-main:first-of-type .blue-rectangle-below-thumbnail {
+  position: absolute !important;
+  left: 50px !important;
+  bottom: 0 !important;
+  width: 150px !important;
+  height: 500px !important;
+  z-index: 1 !important;
+}
+
+.exercise-section-main:first-of-type .blue-rectangle {
+  position: absolute !important;
+  left: 0 !important;
+  bottom: 0 !important;
+  width: 127px !important;
+  height: 404px !important;
+  background-color: #5BC5C6 !important;
+  z-index: 1 !important;
+}
+
+/* Second exercise - Blue rectangle on RIGHT */
+.exercise-section-main:nth-of-type(2) .blue-rectangle-top-right {
+  position: absolute !important;
+  right: 50px !important;
+  bottom: 0 !important;
+  width: 150px !important;
+  height: 400px !important;
+  z-index: 1 !important;
+}
+
+.exercise-section-main:nth-of-type(2) .blue-rectangle {
+  position: absolute !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  width: 97px !important;
+  height: 251px !important;
+  background-color: #5BC5C6 !important;
+  z-index: 1 !important;
+}
+
+/* ============================================
+   BEAR CHARACTER - LEANING ON LEFT STRIP
+   ============================================ */
+
+.bear-on-blue-block {
+  position: absolute !important;
+  left: 20px !important;
+  bottom: 0 !important;
+  width: 180px !important;
+  height: 280px !important;
+  z-index: 3 !important;
+  display: flex !important;
+  align-items: flex-end !important;
+  justify-content: flex-start !important;
+}
+
+.bear-sign-asset {
+  width: 149px !important;
+  height: 251px !important;
+  object-fit: contain !important;
+  max-width: none !important;
+  min-width: 0 !important;
+}
+
+/* ============================================
+   VIDEO CONTAINER POSITIONING
+   ============================================ */
+
+.video-section-container {
+  position: relative !important;
+  width: 100% !important;
+  max-width: 1240px !important;
+  margin: 40px auto !important;
+  padding: 0 20px !important;
+  z-index: 5 !important;
+}
+
+.video-thumbnail-wrapper {
+  position: relative !important;
+  width: 100% !important;
+  aspect-ratio: 16 / 9 !important;
+  border-radius: 15px !important;
+  overflow: visible !important;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3) !important;
+}
+
+.video-thumbnail-img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  border-radius: 15px !important;
+}
+
+/* ============================================
+   EXERCISE SECTIONS
+   ============================================ */
+
+.exercise-section-main {
+  position: relative !important;
+  width: 100% !important;
+  padding: 60px 20px !important;
+  margin-bottom: 80px !important;
+}
+
+.exercise-content-wrapper {
+  position: relative !important;
+  max-width: 1240px !important;
+  margin: 0 auto !important;
+}
+
+/* ============================================
+   RESPONSIVE ADJUSTMENTS
+   ============================================ */
+
+@media (max-width: 1200px) {
+  .exercise-section-main:first-of-type .blue-rectangle {
+    width: 100px !important;
+    height: 320px !important;
+  }
+  
+  .exercise-section-main:nth-of-type(2) .blue-rectangle {
+    width: 80px !important;
+    height: 200px !important;
+  }
+  
+  .bear-on-blue-block {
+    width: 140px !important;
+  }
+  
+  .bear-sign-asset {
+    width: 120px !important;
+    height: auto !important;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Stack elements vertically on mobile */
+  .exercise-section-main:first-of-type .blue-rectangle-below-thumbnail {
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: 100% !important;
+    height: 120px !important;
+  }
+  
+  .exercise-section-main:first-of-type .blue-rectangle {
+    width: 100% !important;
+    height: 100px !important;
+  }
+  
+  .exercise-section-main:nth-of-type(2) .blue-rectangle-top-right {
+    right: 50% !important;
+    transform: translateX(50%) !important;
+    width: 100% !important;
+    height: 120px !important;
+  }
+  
+  .exercise-section-main:nth-of-type(2) .blue-rectangle {
+    width: 100% !important;
+    height: 100px !important;
+  }
+  
+  .bear-on-blue-block {
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    bottom: 10px !important;
+  }
+  
+  .bear-sign-asset {
+    width: 100px !important;
+    height: auto !important;
+  }
+}
+
+/* ============================================
+   OVERRIDE ANY CONFLICTING STYLES
+   ============================================ */
+
+.week-2-page .bear-sign-asset {
+  width: 149px !important;
+  height: 251px !important;
+  min-width: 149px !important;
+  max-width: 149px !important;
+}
+
+@media (max-width: 768px) {
+  .week-2-page .bear-sign-asset {
+    width: 100px !important;
+    height: auto !important;
+    min-width: 100px !important;
+    max-width: 100px !important;
+  }
+}
