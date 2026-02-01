@@ -13,170 +13,170 @@
     rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <style>
-      /* Week 1 Blue Theme: #4169B8 */
+    /* Week 1 Blue Theme: #4169B8 */
 
-      /* Exercise Section Container */
+    /* Exercise Section Container */
+    .week-1-page .exercise-section-main {
+      position: relative;
+      width: 100%;
+      max-width: 1440px;
+      margin: 0 auto 80px;
+      padding: 60px 20px;
+    }
+
+    /* Video Container */
+    .week-1-page .video-section-container {
+      position: relative;
+      width: 100%;
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+      z-index: 5;
+    }
+
+    .week-1-page .video-thumbnail-wrapper {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border-radius: 15px;
+      overflow: visible;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    .week-1-page .video-thumbnail-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 15px;
+      background: #000;
+      position: relative;
+      z-index: 5;
+    }
+
+    /* EXERCISE 1 - LEFT BLUE STRIP */
+    .week-1-page .exercise-section-main:first-of-type .blue-rectangle-below-thumbnail {
+      position: absolute;
+      left: 40;
+      bottom: 20;
+      width: 200px;
+      height: 450px;
+      z-index: 1;
+    }
+
+    .week-1-page .exercise-section-main:first-of-type .blue-rectangle {
+      position: absolute;
+      left: -60px;
+      bottom: 0;
+      width: 127px;
+      height: 404px;
+      background-color: #4169B8;
+      z-index: 1;
+    }
+
+    /* BEAR ON LEFT STRIP */
+    .week-1-page .exercise-section-main:first-of-type .bear-on-blue-block {
+      position: absolute;
+      left: -70px;
+      bottom: 0;
+      width: 149px;
+      height: auto;
+      z-index: 3;
+    }
+
+    .week-1-page .exercise-section-main:first-of-type .bear-sign-asset {
+      width: 140px !important;
+      height: auto !important;
+      max-width: 140px !important;
+      min-width: 140px !important;
+    }
+
+    /* EXERCISE 2 - RIGHT BLUE STRIP */
+    .week-1-page .exercise-section-main:nth-of-type(2) .blue-rectangle-top-right {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 150px;
+      height: 300px;
+      z-index: 10;
+    }
+
+    .week-1-page .exercise-section-main:nth-of-type(2) .blue-rectangle {
+      position: absolute;
+      right: 60px;
+      bottom: 0;
+      width: 97px;
+      height: 250px;
+      background-color: #4169B8;
+      z-index: 1;
+    }
+
+    /* MOBILE RESPONSIVE */
+    @media (max-width: 768px) {
       .week-1-page .exercise-section-main {
-          position: relative;
-          width: 100%;
-          max-width: 1440px;
-          margin: 0 auto 80px;
-          padding: 60px 20px;
+        padding: 30px 16px;
+        margin-bottom: 40px;
       }
 
-      /* Video Container */
-      .week-1-page .video-section-container {
-          position: relative;
-          width: 100%;
-          max-width: 1200px;
-          margin: 40px auto;
-          padding: 0 20px;
-          z-index: 5;
-      }
-
-      .week-1-page .video-thumbnail-wrapper {
-          position: relative;
-          width: 100%;
-          aspect-ratio: 16 / 9;
-          border-radius: 15px;
-          overflow: visible;
-          box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
-      }
-
-      .week-1-page .video-thumbnail-img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          border-radius: 15px;
-          background: #000;
-          position: relative;
-          z-index: 5;
-      }
-
-      /* EXERCISE 1 - LEFT BLUE STRIP */
+      /* Stack strips horizontally on mobile */
       .week-1-page .exercise-section-main:first-of-type .blue-rectangle-below-thumbnail {
-          position: absolute;
-          left: 40;
-          bottom: 20;
-          width: 200px;
-          height: 450px;
-          z-index: 1;
+        position: relative;
+        left: 0;
+        width: 100%;
+        height: 120px;
+        margin: 20px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
       }
 
       .week-1-page .exercise-section-main:first-of-type .blue-rectangle {
-          position: absolute;
-          left: -60px;
-          bottom: 0;
-          width: 127px;
-          height: 404px;
-          background-color: #4169B8;
-          z-index: 1;
+        position: relative;
+        width: 100%;
+        height: 100px;
+        left: 0;
       }
 
-      /* BEAR ON LEFT STRIP */
       .week-1-page .exercise-section-main:first-of-type .bear-on-blue-block {
-          position: absolute;
-          left: -70px;
-          bottom: 0;
-          width: 149px;
-          height: auto;
-          z-index: 3;
+        position: relative;
+        left: 0;
+        margin: 10px auto 0;
+        width: 120px;
       }
 
       .week-1-page .exercise-section-main:first-of-type .bear-sign-asset {
-          width: 140px !important;
-          height: auto !important;
-          max-width: 140px !important;
-          min-width: 140px !important;
+        width: 100px !important;
+        max-width: 100px !important;
+        min-width: 100px !important;
       }
 
-      /* EXERCISE 2 - RIGHT BLUE STRIP */
       .week-1-page .exercise-section-main:nth-of-type(2) .blue-rectangle-top-right {
-          position: absolute;
-          right: 0;
-          bottom: 0;
-          width: 150px;
-          height: 300px;
-          z-index: 10;
+        position: relative;
+        left: 0;
+        right: auto;
+        width: 100%;
+        height: 120px;
+        margin: 20px 0;
       }
 
       .week-1-page .exercise-section-main:nth-of-type(2) .blue-rectangle {
-          position: absolute;
-          right: 60px;
-          bottom: 0;
-          width: 97px;
-          height: 250px;
-          background-color: #4169B8;
-          z-index: 1;
+        position: relative;
+        width: 100%;
+        height: 100px;
+        right: 0;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .week-1-page .exercise-section-main {
+        padding: 20px 12px;
       }
 
-      /* MOBILE RESPONSIVE */
-      @media (max-width: 768px) {
-          .week-1-page .exercise-section-main {
-              padding: 30px 16px;
-              margin-bottom: 40px;
-          }
-
-              /* Stack strips horizontally on mobile */
-              .week-1-page .exercise-section-main:first-of-type .blue-rectangle-below-thumbnail {
-                  position: relative;
-                  left: 0;
-                  width: 100%;
-                  height: 120px;
-                  margin: 20px 0;
-                  display: flex;
-                  flex-direction: column;
-                  align-items: center;
-              }
-
-              .week-1-page .exercise-section-main:first-of-type .blue-rectangle {
-                  position: relative;
-                  width: 100%;
-                  height: 100px;
-                  left: 0;
-              }
-
-              .week-1-page .exercise-section-main:first-of-type .bear-on-blue-block {
-                  position: relative;
-                  left: 0;
-                  margin: 10px auto 0;
-                  width: 120px;
-              }
-
-              .week-1-page .exercise-section-main:first-of-type .bear-sign-asset {
-                  width: 100px !important;
-                  max-width: 100px !important;
-                  min-width: 100px !important;
-              }
-
-              .week-1-page .exercise-section-main:nth-of-type(2) .blue-rectangle-top-right {
-                  position: relative;
-                  left: 0;
-                  right: auto;
-                  width: 100%;
-                  height: 120px;
-                  margin: 20px 0;
-              }
-
-              .week-1-page .exercise-section-main:nth-of-type(2) .blue-rectangle {
-                  position: relative;
-                  width: 100%;
-                  height: 100px;
-                  right: 0;
-              }
+      .week-1-page .exercise-section-main:first-of-type .bear-sign-asset {
+        width: 80px !important;
+        max-width: 80px !important;
+        min-width: 80px !important;
       }
-
-      @media (max-width: 480px) {
-          .week-1-page .exercise-section-main {
-              padding: 20px 12px;
-          }
-
-              .week-1-page .exercise-section-main:first-of-type .bear-sign-asset {
-                  width: 80px !important;
-                  max-width: 80px !important;
-                  min-width: 80px !important;
-              }
-      }
+    }
   </style>
   </style>
 </head>
@@ -190,7 +190,8 @@
           <div class="logos">
             <img src="./assets/images/VoH logo.png" alt="Voices of Hope" class="logo voices-logo">
             <img src="./assets/images/KoL logo.png" alt="Kingston University London" class="logo kingston-logo">
-            <img src="./assets/images/cambridge_university2.svg" alt="Cambridge University" class="logo cambridge-logo">
+            <img src="./assets/images/cuh-logo.png" alt="NHS Cambridge University Hospitals"
+              class="logo cambridge-logo">
           </div>
           <img src="./assets/images/ABC Logo 1.png" alt="ABC Active Breathing Course" class="abc-logo">
         </div>
@@ -199,13 +200,14 @@
           <ul class="nav-list">
             <li><a href="index.html" class="nav-link">HOME</a></li>
             <li><a href="index.html#find-out-more" class="nav-link">FIND OUT MORE</a></li>
-            <li><a href="#" class="nav-link" onclick="openModal('enroll'); return false;">ENROLL</a></li>
+
             <li><a href="#" class="nav-link" onclick="openModal('contact'); return false;">CONTACT US</a></li>
           </ul>
         </nav>
 
         <div style="display: flex; align-items: center; gap: 0.75rem;">
-          <button class="btn-donate" onclick="openModal('donate')">DONATE</button>
+          <a href="https://www.voh.org.uk/appeal/donate/" target="_blank" class="btn-donate"
+            style="text-decoration: none;">DONATE</a>
         </div>
       </div>
     </header>
@@ -326,15 +328,68 @@
       </section>
 
       <!-- Navigation to other weeks -->
-      <section style="padding: 2rem; text-align: center; background: #f3f4f6;">
-        <h3 style="font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; margin-bottom: 1rem; color: #374151;">
-          Continue Your Journey</h3>
-        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-          <a href="week-2.html" class="btn-view-exercises btn-teal" style="min-width: 150px;">Week 2</a>
-          <a href="week-3.html" class="btn-view-exercises btn-pink" style="min-width: 150px;">Week 3</a>
-          <a href="week-4.html" class="btn-view-exercises btn-yellow" style="min-width: 150px;">Week 4</a>
-          <a href="week-5.html" class="btn-view-exercises btn-orange" style="min-width: 150px;">Week 5</a>
-          <a href="week-6.html" class="btn-view-exercises btn-beige" style="min-width: 150px;">Week 6</a>
+      <section id="exercises" class="sessions">
+        <div class="section-content">
+          <h2 class="section-title centered"
+            style="font-family: 'Bebas Neue', sans-serif; font-size: 2rem; margin-bottom: 2rem; color: #374151;">
+            Continue Your Journey
+          </h2>
+          <div class="sessions-grid">
+            <!-- Week 2 -->
+            <div class="session-card session-2">
+              <div class="session-header">
+                <img src="./assets/images/w2.png" alt="Week 2" class="week-number-img">
+              </div>
+              <p class="session-description">Build on your <strong>breathing skills</strong> with <strong>deeper
+                  techniques</strong>. Learn how to <strong>control your breath</strong> to boost
+                <strong>energy</strong>.
+              </p>
+              <a href="week-2.html" class="btn-view-exercises btn-teal">VIEW EXERCISES</a>
+            </div>
+
+            <!-- Week 3 -->
+            <div class="session-card session-3">
+              <div class="session-header">
+                <img src="./assets/images/w3.png" alt="Week 3" class="week-number-img">
+              </div>
+              <p class="session-description">Master <strong>advanced breathing patterns</strong> that help you
+                stay <strong>balanced and confident</strong>.</p>
+              <a href="week-3.html" class="btn-view-exercises btn-pink">VIEW EXERCISES</a>
+            </div>
+
+            <!-- Week 4 -->
+            <div class="session-card session-4">
+              <div class="session-header">
+                <img src="./assets/images/w4.png" alt="Week 4" class="week-number-img">
+              </div>
+              <p class="session-description">Explore <strong>rhythmic breathing exercises</strong> that sync your
+                <strong>body and mind</strong>.
+              </p>
+              <a href="week-4.html" class="btn-view-exercises btn-yellow">VIEW EXERCISES</a>
+            </div>
+
+            <!-- Week 5 -->
+            <div class="session-card session-5">
+              <div class="session-header">
+                <img src="./assets/images/w5.png" alt="Week 5" class="week-number-img">
+              </div>
+              <p class="session-description">Develop <strong>powerful breathing techniques</strong> for
+                <strong>focus and clarity</strong>.
+              </p>
+              <a href="week-5.html" class="btn-view-exercises btn-orange">VIEW EXERCISES</a>
+            </div>
+
+            <!-- Week 6 -->
+            <div class="session-card session-6">
+              <div class="session-header">
+                <img src="./assets/images/w6.png" alt="Week 6" class="week-number-img">
+              </div>
+              <p class="session-description">Become a <strong>breathing pro</strong>! Master all the
+                <strong>techniques</strong> and create your own <strong>breathing routine</strong>.
+              </p>
+              <a href="week-6.html" class="btn-view-exercises btn-beige">VIEW EXERCISES</a>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -351,10 +406,14 @@
           </form>
           <div id="newsletter-message" style="margin-top: 1rem; display: none;"></div>
           <div class="social-links">
-            <img src="./assets/images/Listitem  Link.png" alt="Facebook" class="social-icon">
-            <img src="./assets/images/Listitem  Link-1.png" alt="Twitter" class="social-icon">
-            <img src="./assets/images/Listitem  Link-2.png" alt="Instagram" class="social-icon">
-            <img src="./assets/images/Listitem  Link-3.png" alt="YouTube" class="social-icon">
+            <a href="https://www.facebook.com/voicesofhope" target="_blank"><img
+                src="./assets/images/Listitem → Link.png" alt="Facebook" class="social-icon"></a>
+            <a href="https://twitter.com/voicesofhope" target="_blank"><img src="./assets/images/Listitem → Link-1.png"
+                alt="Twitter" class="social-icon"></a>
+            <a href="https://www.instagram.com/voicesofhope" target="_blank"><img
+                src="./assets/images/Listitem → Link-2.png" alt="Instagram" class="social-icon"></a>
+            <a href="https://www.youtube.com/voicesofhope" target="_blank"><img
+                src="./assets/images/Listitem → Link-3.png" alt="YouTube" class="social-icon"></a>
           </div>
           <div class="footer-info">
             <p class="footer-contact">info@voh.org.uk &nbsp;&nbsp;&nbsp; 161A Clarence Street, Kingston-Upon-Thames,

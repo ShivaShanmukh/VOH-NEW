@@ -2,168 +2,194 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Week 3 - Big Breathing Adventure</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:wght@400;700;900&family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    
-    <style>
-        /* ========================================
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Week 3 - Big Breathing Adventure</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:wght@400;700;900&family=Oswald:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* ========================================
    WEEK 3 - PINK STRIP BEHIND VIDEO
    ======================================== */
 
-        /* EXERCISE 1 - LEFT PINK STRIP BEHIND VIDEO */
-        .exercise-section-main:first-of-type .blue-rectangle-below-thumbnail {
-            position: absolute;
-            left: 0px; /* Start at container edge */
-            bottom: 0;
-            width: 200px; /* Container width */
-            height: 450px; /* Container height */
-            z-index: 1; /* Behind video */
-        }
+    /* EXERCISE 1 - LEFT PINK STRIP BEHIND VIDEO */
+    .exercise-section-main:first-of-type .blue-rectangle-below-thumbnail {
+      position: absolute;
+      left: 0px;
+      /* Start at container edge */
+      bottom: 0;
+      width: 200px;
+      /* Container width */
+      height: 450px;
+      /* Container height */
+      z-index: 1;
+      /* Behind video */
+    }
 
-        .exercise-section-main:first-of-type .blue-rectangle {
-            position: absolute;
-            left: 50px; /* Position from left edge */
-            bottom: 0;
-            width: 100px; /* Strip width */
-            height: 500px; /* Strip height */
-            background-color: #E94A8A; /* Pink color */
-            z-index: 1; /* Behind video */
-        }
+    .exercise-section-main:first-of-type .blue-rectangle {
+      position: absolute;
+      left: 50px;
+      /* Position from left edge */
+      bottom: 0;
+      width: 100px;
+      /* Strip width */
+      height: 500px;
+      /* Strip height */
+      background-color: #E94A8A;
+      /* Pink color */
+      z-index: 1;
+      /* Behind video */
+    }
 
-        .exercise-section-main:first-of-type .bear-on-blue-block {
-            position: absolute;
-            left: 60px; /* Bear position on strip */
-            bottom: 20px; /* Above bottom edge */
-            width: 110px;
-            height: auto;
-            z-index: 3; /* Above strip, below video */
-        }
+    .exercise-section-main:first-of-type .bear-on-blue-block {
+      position: absolute;
+      left: 60px;
+      /* Bear position on strip */
+      bottom: 20px;
+      /* Above bottom edge */
+      width: 110px;
+      height: auto;
+      z-index: 3;
+      /* Above strip, below video */
+    }
 
-        .exercise-section-main:first-of-type .bear-sign-asset {
-            width: 110px !important;
-            height: auto !important;
-            max-width: 110px !important;
-            min-width: 110px !important;
-        }
+    .exercise-section-main:first-of-type .bear-sign-asset {
+      width: 110px !important;
+      height: auto !important;
+      max-width: 110px !important;
+      min-width: 110px !important;
+    }
 
-        /* EXERCISE 2 - RIGHT PINK STRIP BEHIND VIDEO */
-        .exercise-section-main:nth-of-type(2) .blue-rectangle-top-right {
-            position: absolute;
-            right: 0px; /* Start at container edge */
-            bottom: 0;
-            width: 150px; /* Container width */
-            height: 300px; /* Container height */
-            z-index: 1; /* Behind video */
-        }
+    /* EXERCISE 2 - RIGHT PINK STRIP BEHIND VIDEO */
+    .exercise-section-main:nth-of-type(2) .blue-rectangle-top-right {
+      position: absolute;
+      right: 0px;
+      /* Start at container edge */
+      bottom: 0;
+      width: 150px;
+      /* Container width */
+      height: 300px;
+      /* Container height */
+      z-index: 1;
+      /* Behind video */
+    }
 
-        .exercise-section-main:nth-of-type(2) .blue-rectangle {
-            position: absolute;
-            right: 50px; /* Position from right edge */
-            bottom: 0;
-            width: 90px; /* Strip width */
-            height: 400px; /* Strip height */
-            background-color: #E94A8A; /* Pink color */
-            z-index: 1; /* Behind video */
-        }
+    .exercise-section-main:nth-of-type(2) .blue-rectangle {
+      position: absolute;
+      right: 50px;
+      /* Position from right edge */
+      bottom: 0;
+      width: 90px;
+      /* Strip width */
+      height: 400px;
+      /* Strip height */
+      background-color: #E94A8A;
+      /* Pink color */
+      z-index: 1;
+      /* Behind video */
+    }
 
-        /* VIDEO CONTAINERS */
-        .video-section-container {
-            position: relative;
-            width: 100%;
-            max-width: 650px;
-            margin: 0 auto;
-            padding: 0 20px;
-            aspect-ratio: 16 / 9;
-            z-index: 5; /* ABOVE strips */
-        }
+    /* VIDEO CONTAINERS */
+    .video-section-container {
+      position: relative;
+      width: 100%;
+      max-width: 650px;
+      margin: 0 auto;
+      padding: 0 20px;
+      aspect-ratio: 16 / 9;
+      z-index: 5;
+      /* ABOVE strips */
+    }
 
-        .video-thumbnail-wrapper {
-            position: relative;
-            width: 100%;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
-        }
+    .video-thumbnail-wrapper {
+      position: relative;
+      width: 100%;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    }
 
-        .video-thumbnail-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 15px;
-            position: relative;
-            z-index: 5; /* Video on top */
-        }
+    .video-thumbnail-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 15px;
+      position: relative;
+      z-index: 5;
+      /* Video on top */
+    }
 
-        /* EXERCISE SECTIONS */
-        .exercise-section-main {
-            position: relative;
-            width: 100%;
-            padding: 60px 20px;
-            margin-bottom: 80px;
-        }
+    /* EXERCISE SECTIONS */
+    .exercise-section-main {
+      position: relative;
+      width: 100%;
+      padding: 60px 20px;
+      margin-bottom: 80px;
+    }
 
-        .exercise-content-wrapper {
-            position: relative;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+    .exercise-content-wrapper {
+      position: relative;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
 
-        /* ========================================
+    /* ========================================
            MOBILE RESPONSIVE
            ======================================== */
-        @media (max-width: 768px) {
-            /* Stack strips horizontally below videos */
-            .exercise-section-main:first-of-type .blue-rectangle-below-thumbnail,
-            .exercise-section-main:nth-of-type(2) .blue-rectangle-top-right {
-                position: relative;
-                left: 0;
-                right: 0;
-                width: 100%;
-                height: 80px;
-                margin: 20px 0;
-            }
+    @media (max-width: 768px) {
 
-            .exercise-section-main:first-of-type .blue-rectangle,
-            .exercise-section-main:nth-of-type(2) .blue-rectangle {
-                position: relative;
-                left: 0;
-                right: 0;
-                width: 100%;
-                height: 60px;
-            }
+      /* Stack strips horizontally below videos */
+      .exercise-section-main:first-of-type .blue-rectangle-below-thumbnail,
+      .exercise-section-main:nth-of-type(2) .blue-rectangle-top-right {
+        position: relative;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 80px;
+        margin: 20px 0;
+      }
 
-            .exercise-section-main:first-of-type .bear-on-blue-block {
-                position: relative;
-                left: 50%;
-                bottom: auto;
-                transform: translateX(-50%);
-                margin-top: 10px;
-            }
+      .exercise-section-main:first-of-type .blue-rectangle,
+      .exercise-section-main:nth-of-type(2) .blue-rectangle {
+        position: relative;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 60px;
+      }
 
-            .exercise-section-main:first-of-type .bear-sign-asset {
-                width: 80px !important;
-                max-width: 80px !important;
-                min-width: 80px !important;
-            }
+      .exercise-section-main:first-of-type .bear-on-blue-block {
+        position: relative;
+        left: 50%;
+        bottom: auto;
+        transform: translateX(-50%);
+        margin-top: 10px;
+      }
 
-            /* Full-width video containers on mobile */
-            .video-section-container {
-                max-width: 100%;
-                padding: 0 15px;
-            }
-        }
-    </style>
+      .exercise-section-main:first-of-type .bear-sign-asset {
+        width: 80px !important;
+        max-width: 80px !important;
+        min-width: 80px !important;
+      }
+
+      /* Full-width video containers on mobile */
+      .video-section-container {
+        max-width: 100%;
+        padding: 0 15px;
+      }
+    }
+  </style>
 </head>
 
 <body>
   <div class="week-3-page">
-    
+
     <!-- ========================================
          HEADER
          ======================================== -->
@@ -173,7 +199,8 @@
           <div class="logos">
             <img src="./assets/images/VoH logo.png" alt="Voices of Hope" class="logo voices-logo">
             <img src="./assets/images/KoL logo.png" alt="Kingston University London" class="logo kingston-logo">
-            <img src="./assets/images/cambridge_university2.svg" alt="Cambridge University" class="logo cambridge-logo">
+            <img src="./assets/images/cuh-logo.png" alt="NHS Cambridge University Hospitals"
+              class="logo cambridge-logo">
           </div>
           <img src="./assets/images/ABC Logo 1.png" alt="ABC Active Breathing Course" class="abc-logo">
         </div>
@@ -181,18 +208,19 @@
           <ul class="nav-list">
             <li><a href="index.html" class="nav-link">HOME</a></li>
             <li><a href="index.html#find-out-more" class="nav-link">FIND OUT MORE</a></li>
-            <li><a href="#" class="nav-link" onclick="openModal('enroll'); return false;">ENROLL</a></li>
+
             <li><a href="#" class="nav-link" onclick="openModal('contact'); return false;">CONTACT US</a></li>
           </ul>
         </nav>
         <div style="display: flex; align-items: center; gap: 0.75rem;">
-          <button class="btn-donate" onclick="openModal('donate')">DONATE</button>
+          <a href="https://www.voh.org.uk/appeal/donate/" target="_blank" class="btn-donate"
+            style="text-decoration: none;">DONATE</a>
         </div>
       </div>
     </header>
 
     <main>
-      
+
       <!-- ========================================
            WEEK 3 BADGE
            ======================================== -->
@@ -207,7 +235,7 @@
            Left pink strip + sitting bear
            ======================================== -->
       <section class="exercise-section-main">
-        
+
         <!-- Title -->
         <div class="exercise-title-section">
           <h1 class="exercise-main-title">
@@ -250,11 +278,12 @@
           <!-- Video with Pink Strip and Bear -->
           <div class="video-section-container">
             <div class="video-thumbnail-wrapper">
-              <video controls class="video-thumbnail-img" data-week="3" data-exercise="1" preload="metadata" playsinline>
+              <video controls class="video-thumbnail-img" data-week="3" data-exercise="1" preload="metadata"
+                playsinline>
                 <source src="./assets/videos/Session 3 - excercise 8 final.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
-              
+
               <!-- Pink Strip Container (LEFT) -->
               <div class="blue-rectangle-below-thumbnail">
                 <!-- Pink Strip -->
@@ -274,7 +303,7 @@
            Right pink strip only
            ======================================== -->
       <section class="exercise-section-main">
-        
+
         <!-- Title -->
         <div class="exercise-title-section">
           <h1 class="exercise-main-title">
@@ -328,11 +357,12 @@
           <!-- Video with Pink Strip (RIGHT) -->
           <div class="video-section-container">
             <div class="video-thumbnail-wrapper">
-              <video controls class="video-thumbnail-img" data-week="3" data-exercise="2" preload="metadata" playsinline>
+              <video controls class="video-thumbnail-img" data-week="3" data-exercise="2" preload="metadata"
+                playsinline>
                 <source src="./assets/videos/session 3 - excercise 9 final.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
-              
+
               <!-- Pink Strip Container (RIGHT) -->
               <div class="blue-rectangle-top-right">
                 <!-- Pink Strip -->
@@ -346,15 +376,70 @@
       <!-- ========================================
            NAVIGATION TO OTHER WEEKS
            ======================================== -->
-      <section style="padding: 2rem; text-align: center; background: #f3f4f6;">
-        <h3 style="font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; margin-bottom: 1rem; color: #374151;">
-          Continue Your Journey</h3>
-        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-          <a href="week-1.html" class="btn-view-exercises btn-blue" style="min-width: 150px;">Week 1</a>
-          <a href="week-2.html" class="btn-view-exercises btn-teal" style="min-width: 150px;">Week 2</a>
-          <a href="week-4.html" class="btn-view-exercises btn-yellow" style="min-width: 150px;">Week 4</a>
-          <a href="week-5.html" class="btn-view-exercises btn-orange" style="min-width: 150px;">Week 5</a>
-          <a href="week-6.html" class="btn-view-exercises btn-beige" style="min-width: 150px;">Week 6</a>
+      <section id="exercises" class="sessions">
+        <div class="section-content">
+          <h2 class="section-title centered"
+            style="font-family: 'Bebas Neue', sans-serif; font-size: 2rem; margin-bottom: 2rem; color: #374151;">
+            Continue Your Journey
+          </h2>
+          <div class="sessions-grid">
+            <!-- Week 1 -->
+            <div class="session-card session-1">
+              <div class="session-header">
+                <img src="./assets/images/w1.png" alt="Week 1" class="week-number-img">
+              </div>
+              <p class="session-description">Discover the <strong>power of your breath</strong>! Learn
+                <strong>basic breathing techniques</strong> that help you feel <strong>calm and
+                  focused</strong>.
+              </p>
+              <a href="week-1.html" class="btn-view-exercises btn-blue">VIEW EXERCISES</a>
+            </div>
+
+            <!-- Week 2 -->
+            <div class="session-card session-2">
+              <div class="session-header">
+                <img src="./assets/images/w2.png" alt="Week 2" class="week-number-img">
+              </div>
+              <p class="session-description">Build on your <strong>breathing skills</strong> with <strong>deeper
+                  techniques</strong>. Learn how to <strong>control your breath</strong> to boost
+                <strong>energy</strong>.
+              </p>
+              <a href="week-2.html" class="btn-view-exercises btn-teal">VIEW EXERCISES</a>
+            </div>
+
+            <!-- Week 4 -->
+            <div class="session-card session-4">
+              <div class="session-header">
+                <img src="./assets/images/w4.png" alt="Week 4" class="week-number-img">
+              </div>
+              <p class="session-description">Explore <strong>rhythmic breathing exercises</strong> that sync your
+                <strong>body and mind</strong>.
+              </p>
+              <a href="week-4.html" class="btn-view-exercises btn-yellow">VIEW EXERCISES</a>
+            </div>
+
+            <!-- Week 5 -->
+            <div class="session-card session-5">
+              <div class="session-header">
+                <img src="./assets/images/w5.png" alt="Week 5" class="week-number-img">
+              </div>
+              <p class="session-description">Develop <strong>powerful breathing techniques</strong> for
+                <strong>focus and clarity</strong>.
+              </p>
+              <a href="week-5.html" class="btn-view-exercises btn-orange">VIEW EXERCISES</a>
+            </div>
+
+            <!-- Week 6 -->
+            <div class="session-card session-6">
+              <div class="session-header">
+                <img src="./assets/images/w6.png" alt="Week 6" class="week-number-img">
+              </div>
+              <p class="session-description">Become a <strong>breathing pro</strong>! Master all the
+                <strong>techniques</strong> and create your own <strong>breathing routine</strong>.
+              </p>
+              <a href="week-6.html" class="btn-view-exercises btn-beige">VIEW EXERCISES</a>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -373,13 +458,18 @@
           </form>
           <div id="newsletter-message" style="margin-top: 1rem; display: none;"></div>
           <div class="social-links">
-            <img src="./assets/images/Listitem  Link.png" alt="Facebook" class="social-icon">
-            <img src="./assets/images/Listitem  Link-1.png" alt="Twitter" class="social-icon">
-            <img src="./assets/images/Listitem  Link-2.png" alt="Instagram" class="social-icon">
-            <img src="./assets/images/Listitem  Link-3.png" alt="YouTube" class="social-icon">
+            <a href="https://www.facebook.com/voicesofhope" target="_blank"><img
+                src="./assets/images/Listitem → Link.png" alt="Facebook" class="social-icon"></a>
+            <a href="https://twitter.com/voicesofhope" target="_blank"><img src="./assets/images/Listitem → Link-1.png"
+                alt="Twitter" class="social-icon"></a>
+            <a href="https://www.instagram.com/voicesofhope" target="_blank"><img
+                src="./assets/images/Listitem → Link-2.png" alt="Instagram" class="social-icon"></a>
+            <a href="https://www.youtube.com/voicesofhope" target="_blank"><img
+                src="./assets/images/Listitem → Link-3.png" alt="YouTube" class="social-icon"></a>
           </div>
           <div class="footer-info">
-            <p class="footer-contact">info@voh.org.uk &nbsp;&nbsp;&nbsp; 161A Clarence Street, Kingston-Upon-Thames, Surrey KT1 1QT</p>
+            <p class="footer-contact">info@voh.org.uk &nbsp;&nbsp;&nbsp; 161A Clarence Street, Kingston-Upon-Thames,
+              Surrey KT1 1QT</p>
             <p class="footer-charity">UK Charity Commission Registration 1187454</p>
             <p class="footer-privacy">Privacy Policy</p>
             <div class="footer-bottom-line">

@@ -22,7 +22,7 @@
                 <div class="logos">
                     <img src="./assets/images/VoH logo.png" alt="Voices of Hope" class="logo voices-logo">
                     <img src="./assets/images/KoL logo.png" alt="Kingston University London" class="logo kingston-logo">
-                    <img src="./assets/images/cambridge_university2.svg" alt="Cambridge University"
+                    <img src="./assets/images/cuh-logo.png" alt="NHS Cambridge University Hospitals"
                         class="logo cambridge-logo">
                 </div>
                 <img src="./assets/images/ABC Logo 1.png" alt="ABC Active Breathing Course" class="abc-logo">
@@ -34,13 +34,14 @@
                             onclick="scrollToSection('home'); return false;">HOME</a></li>
                     <li><a href="#find-out-more" class="nav-link"
                             onclick="scrollToSection('find-out-more'); return false;">FIND OUT MORE</a></li>
-                    <li><a href="#" class="nav-link" onclick="openModal('enroll'); return false;">ENROLL</a></li>
+
                     <li><a href="#" class="nav-link" onclick="openModal('contact'); return false;">CONTACT US</a></li>
                 </ul>
             </nav>
 
             <div style="display: flex; align-items: center; gap: 0.75rem;">
-                <button class="btn-donate" onclick="openModal('donate')">DONATE</button>
+                <a href="https://www.voh.org.uk/appeal/donate/" target="_blank" class="btn-donate"
+                    style="text-decoration: none;">DONATE</a>
             </div>
         </div>
     </header>
@@ -148,7 +149,8 @@
                     </div>
                     <p class="session-description">Discover the <strong>power of your breath</strong>! Learn
                         <strong>basic breathing techniques</strong> that help you feel <strong>calm and
-                            focused</strong>.</p>
+                            focused</strong>.
+                    </p>
                     <a href="week-1.html" class="btn-view-exercises btn-blue">VIEW EXERCISES</a>
                 </div>
 
@@ -159,7 +161,8 @@
                     </div>
                     <p class="session-description">Build on your <strong>breathing skills</strong> with <strong>deeper
                             techniques</strong>. Learn how to <strong>control your breath</strong> to boost
-                        <strong>energy</strong>.</p>
+                        <strong>energy</strong>.
+                    </p>
                     <a href="week-2.html" class="btn-view-exercises btn-teal">VIEW EXERCISES</a>
                 </div>
 
@@ -170,7 +173,7 @@
                     </div>
                     <p class="session-description">Master <strong>advanced breathing patterns</strong> that help you
                         stay <strong>balanced and confident</strong>.</p>
-                    <a href="week-3-clean.html" class="btn-view-exercises btn-pink">VIEW EXERCISES</a>
+                    <a href="week-3.html" class="btn-view-exercises btn-pink">VIEW EXERCISES</a>
                 </div>
 
                 <!-- Week 4 -->
@@ -179,7 +182,8 @@
                         <img src="./assets/images/w4.png" alt="Week 4" class="week-number-img">
                     </div>
                     <p class="session-description">Explore <strong>rhythmic breathing exercises</strong> that sync your
-                        <strong>body and mind</strong>.</p>
+                        <strong>body and mind</strong>.
+                    </p>
                     <a href="week-4.html" class="btn-view-exercises btn-yellow">VIEW EXERCISES</a>
                 </div>
 
@@ -189,7 +193,8 @@
                         <img src="./assets/images/w5.png" alt="Week 5" class="week-number-img">
                     </div>
                     <p class="session-description">Develop <strong>powerful breathing techniques</strong> for
-                        <strong>focus and clarity</strong>.</p>
+                        <strong>focus and clarity</strong>.
+                    </p>
                     <a href="week-5.html" class="btn-view-exercises btn-orange">VIEW EXERCISES</a>
                 </div>
 
@@ -199,7 +204,8 @@
                         <img src="./assets/images/w6.png" alt="Week 6" class="week-number-img">
                     </div>
                     <p class="session-description">Become a <strong>breathing pro</strong>! Master all the
-                        <strong>techniques</strong> and create your own <strong>breathing routine</strong>.</p>
+                        <strong>techniques</strong> and create your own <strong>breathing routine</strong>.
+                    </p>
                     <a href="week-6.html" class="btn-view-exercises btn-beige">VIEW EXERCISES</a>
                 </div>
             </div>
@@ -214,25 +220,14 @@
                     class="every-breath-counts">
                 <p class="footer-tagline">Your child's journey to better focus, calm, and wellbeing starts here.</p>
             </div>
-            <div class="footer-right">
-                <div class="enrollment-info">
-                    <ul class="enrollment-benefits">
-                        <li>Receive your course invitation</li>
-                        <li>Join our online breathing sessions each week</li>
-                        <li>Practice simple exercises at home<br class="mobile-line-break"> in just 10 minutes a day
-                        </li>
-                        <li>Watch your child's confidence and calmness grow</li>
-                    </ul>
-                    <button class="btn-enroll-now" onclick="openModal('enroll')">ENROLL NOW</button>
-                </div>
-            </div>
+
         </div>
 
         <!-- Site Visits -->
         <div class="site-visits-section">
             <div class="visitor-icon-circle"></div>
             <span class="visitor-count">24</span>
-            <span class="visitor-text">Site Visits</span>
+            <span class="visitor-text" style="color: white;">Site Visits</span>
         </div>
     </footer>
 
@@ -249,10 +244,14 @@
             </form>
             <div id="newsletter-message" style="margin-top: 1rem; display: none;"></div>
             <div class="social-links">
-                <img src="./assets/images/Listitem  Link.png" alt="Facebook" class="social-icon">
-                <img src="./assets/images/Listitem  Link-1.png" alt="Twitter" class="social-icon">
-                <img src="./assets/images/Listitem  Link-2.png" alt="Instagram" class="social-icon">
-                <img src="./assets/images/Listitem  Link-3.png" alt="YouTube" class="social-icon">
+                <a href="https://www.facebook.com/voicesofhope" target="_blank"><img
+                        src="./assets/images/Listitem → Link.png" alt="Facebook" class="social-icon"></a>
+                <a href="https://twitter.com/voicesofhope" target="_blank"><img
+                        src="./assets/images/Listitem → Link-1.png" alt="Twitter" class="social-icon"></a>
+                <a href="https://www.instagram.com/voicesofhope" target="_blank"><img
+                        src="./assets/images/Listitem → Link-2.png" alt="Instagram" class="social-icon"></a>
+                <a href="https://www.youtube.com/voicesofhope" target="_blank"><img
+                        src="./assets/images/Listitem → Link-3.png" alt="YouTube" class="social-icon"></a>
             </div>
             <div class="footer-info">
                 <p class="footer-contact">info@voh.org.uk &nbsp;&nbsp;&nbsp; 161A Clarence Street, Kingston-Upon-Thames,
